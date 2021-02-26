@@ -52,11 +52,13 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
         {
-          "ref": "loan_applications_history",
+          "ref": "loan_applications_history_copy",
           "deps": []
         }
       ]
@@ -75,12 +77,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 23,
+    "versionNumber": 24,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1594279157908
+    "lastModifiedOn": 1614311262060
   },
   "creationTag": {
     "versionNumber": 0,

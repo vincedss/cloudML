@@ -20,7 +20,8 @@
       "maxStoredBytes": 104857600,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL"
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
     },
     "autoRefreshSample": false
   },
