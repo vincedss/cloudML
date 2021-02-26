@@ -196,7 +196,16 @@
       "useGlobalMetastore": false,
       "pipelineAllowStart": true,
       "readParams": {
-        "map": {}
+        "map": {
+          "loan_applications_history_stacked": {
+            "cache": false,
+            "repartition": 10
+          },
+          "loan_metrics_by_state": {
+            "cache": false,
+            "repartition": 10
+          }
+        }
       },
       "overwriteOutputSchema": false,
       "executionEngine": "SPARK_SUBMIT",
@@ -206,6 +215,7 @@
       }
     }
   },
+  "engineType": "SPARK",
   "virtualInputs": [
     {
       "preFilter": {
