@@ -179,7 +179,8 @@
       "promoted": false
     },
     "cluster": {
-      "clusterMode": "INHERIT"
+      "clusterMode": "EXPLICIT_CLUSTER",
+      "clusterId": "newaks"
     },
     "k8sCluster": {
       "clusterMode": "INHERIT"
@@ -266,11 +267,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 199,
+    "versionNumber": 200,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1614306276874
+    "lastModifiedOn": 1614311658279
   },
   "creationTag": {
     "versionNumber": 0,
