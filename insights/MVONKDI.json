@@ -1,0 +1,28 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "LjCiUJEi"
+  },
+  "owner": "vdestoecklin",
+  "listed": false,
+  "name": "Clustering (PY_ISOLATION_FOREST) on loan_applications_features table",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1542940023487
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1542940023487
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

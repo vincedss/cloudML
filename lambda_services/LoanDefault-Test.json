@@ -1,0 +1,611 @@
+{
+  "name": "LoanDefault-Test",
+  "endpoints": [
+    {
+      "modelRef": "4mHQeDVb",
+      "useJava": false,
+      "testQueries": [
+        {
+          "name": "loan_applications_features_1 #1",
+          "q": {
+            "features": {
+              "loan_amnt": 7575,
+              "funded_amnt": 7575,
+              "funded_amnt_inv": 7575,
+              "term": "36 months",
+              "int_rate": 14.49,
+              "installment": 260.71,
+              "grade": "C",
+              "sub_grade": "C4",
+              "issue_date": "Oct-2014",
+              "zip_code": "357xx",
+              "addr_state": "AL",
+              "dti": 11.31,
+              "emp_title": "server",
+              "emp_length_month": 12,
+              "home_ownership": "MORTGAGE",
+              "verification_status": "Source Verified",
+              "pymnt_plan": false,
+              "desc": "nan",
+              "purpose": "medical",
+              "title": "Medical expenses",
+              "loan_amnt_avg": 14846.3675214,
+              "loan_amnt_stddev": 9072.28945993,
+              "int_rate_avg": 13.6282051282,
+              "installment_avg": 435.57017094,
+              "debt_amnt": 29.486301,
+              "debt_amnt_norm": -0.831895381621,
+              "instal_norm": -0.690762287689
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_1 #2",
+          "q": {
+            "features": {
+              "loan_amnt": 11700,
+              "funded_amnt": 11700,
+              "funded_amnt_inv": 11700,
+              "term": "36 months",
+              "int_rate": 20.99,
+              "installment": 440.74,
+              "grade": "E",
+              "sub_grade": "E4",
+              "issue_date": "Oct-2014",
+              "zip_code": "857xx",
+              "addr_state": "AZ",
+              "dti": 24.48,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "pymnt_plan": false,
+              "desc": "nan",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation",
+              "loan_amnt_avg": 13375.2283105,
+              "loan_amnt_stddev": 8174.26980679,
+              "int_rate_avg": 12.9584474886,
+              "installment_avg": 399.680319635,
+              "debt_amnt": 107.893152,
+              "debt_amnt_norm": 0.441752817431,
+              "instal_norm": 0.0395355009743
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_1 #3",
+          "q": {
+            "features": {
+              "loan_amnt": 25000,
+              "funded_amnt": 25000,
+              "funded_amnt_inv": 25000,
+              "term": "36 months",
+              "int_rate": 7.69,
+              "installment": 779.84,
+              "grade": "A",
+              "sub_grade": "A4",
+              "issue_date": "Oct-2014",
+              "zip_code": "850xx",
+              "addr_state": "AZ",
+              "dti": 23.91,
+              "home_ownership": "MORTGAGE",
+              "verification_status": "Verified",
+              "pymnt_plan": false,
+              "desc": "nan",
+              "purpose": "credit_card",
+              "title": "Credit card refinancing",
+              "loan_amnt_avg": 13375.2283105,
+              "loan_amnt_stddev": 8174.26980679,
+              "int_rate_avg": 12.9584474886,
+              "installment_avg": 399.680319635,
+              "debt_amnt": 186.459744,
+              "debt_amnt_norm": 1.71799586418,
+              "instal_norm": 1.41510612885
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_1 #4",
+          "q": {
+            "features": {
+              "loan_amnt": 9000,
+              "funded_amnt": 9000,
+              "funded_amnt_inv": 9000,
+              "term": "36 months",
+              "int_rate": 18.24,
+              "installment": 326.46,
+              "grade": "D",
+              "sub_grade": "D5",
+              "issue_date": "Oct-2014",
+              "zip_code": "920xx",
+              "addr_state": "CA",
+              "dti": 31.98,
+              "emp_title": "Supervisor",
+              "emp_length_month": 120,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "pymnt_plan": false,
+              "desc": "nan",
+              "purpose": "other",
+              "title": "Other",
+              "loan_amnt_avg": 14330.2169421,
+              "loan_amnt_stddev": 8279.19280478,
+              "int_rate_avg": 13.5602892562,
+              "installment_avg": 438.958161157,
+              "debt_amnt": 104.401908,
+              "debt_amnt_norm": 0.385040724338,
+              "instal_norm": -0.42404518718
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #1",
+          "q": {
+            "features": {
+              "loan_amnt": 1000,
+              "funded_amnt": 1000,
+              "funded_amnt_inv": 1000,
+              "term": "36 months",
+              "int_rate": 12.39,
+              "installment": 33.41,
+              "grade": "C",
+              "sub_grade": "C1",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "567xx",
+              "addr_state": "MN",
+              "dti": 18.38,
+              "emp_title": "Attorney",
+              "emp_length_month": 36,
+              "home_ownership": "OWN",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "other",
+              "title": "Other"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #2",
+          "q": {
+            "features": {
+              "loan_amnt": 14575,
+              "funded_amnt": 14575,
+              "funded_amnt_inv": 14575,
+              "term": "36 months",
+              "int_rate": 11.99,
+              "installment": 484.03,
+              "grade": "B",
+              "sub_grade": "B5",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "840xx",
+              "addr_state": "UT",
+              "dti": 23,
+              "emp_title": "Workforce Manager",
+              "emp_length_month": 108,
+              "home_ownership": "RENT",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #3",
+          "q": {
+            "features": {
+              "loan_amnt": 15000,
+              "funded_amnt": 15000,
+              "funded_amnt_inv": 15000,
+              "term": "36 months",
+              "int_rate": 6.49,
+              "installment": 459.67,
+              "grade": "A",
+              "sub_grade": "A2",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "950xx",
+              "addr_state": "CA",
+              "dti": 11.48,
+              "emp_title": "Robotics Engineer",
+              "emp_length_month": 36,
+              "home_ownership": "RENT",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "credit_card",
+              "title": "Credit card refinancing"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #4",
+          "q": {
+            "features": {
+              "loan_amnt": 10000,
+              "funded_amnt": 10000,
+              "funded_amnt_inv": 10000,
+              "term": "36 months",
+              "int_rate": 6.03,
+              "installment": 304.36,
+              "grade": "A",
+              "sub_grade": "A1",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "545xx",
+              "addr_state": "WI",
+              "dti": 15.08,
+              "emp_title": "Manager",
+              "emp_length_month": 60,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation"
+            }
+          }
+        }
+      ],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "ldtest",
+      "type": "STD_PREDICTION"
+    },
+    {
+      "modelRef": "tcLdbLTc",
+      "useJava": false,
+      "testQueries": [
+        {
+          "name": "loan_applications_features_clusters #1",
+          "q": {
+            "features": {
+              "loan_amnt": 24500,
+              "funded_amnt": 24500,
+              "funded_amnt_inv": 24500,
+              "term": "36 months",
+              "int_rate": 14.31,
+              "installment": 841.05,
+              "grade": "C",
+              "sub_grade": "C4",
+              "issue_date": "Nov-2014",
+              "zip_code": "995xx",
+              "addr_state": "AK",
+              "dti": 24.57,
+              "emp_title": "Staff Sergeant",
+              "emp_length_month": 120,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "pymnt_plan": "False",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation",
+              "loan_amnt_avg": 15906.25,
+              "loan_amnt_stddev": 8206.56697269,
+              "int_rate_avg": 11.145,
+              "installment_avg": 513.0975,
+              "debt_amnt": 206.645985,
+              "debt_amnt_norm": 2.09812463287,
+              "instal_norm": 1.70002774704,
+              "cluster_labels": "regular",
+              "anomaly_score": 0.161991335303
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_clusters #2",
+          "q": {
+            "features": {
+              "loan_amnt": 22000,
+              "funded_amnt": 22000,
+              "funded_amnt_inv": 22000,
+              "term": "36 months",
+              "int_rate": 8.67,
+              "installment": 696.23,
+              "grade": "B",
+              "sub_grade": "B1",
+              "issue_date": "Nov-2014",
+              "zip_code": "995xx",
+              "addr_state": "AK",
+              "dti": 1.87,
+              "emp_title": "Manager",
+              "emp_length_month": 120,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "pymnt_plan": "False",
+              "purpose": "car",
+              "title": "Car financing",
+              "loan_amnt_avg": 15906.25,
+              "loan_amnt_stddev": 8206.56697269,
+              "int_rate_avg": 11.145,
+              "installment_avg": 513.0975,
+              "debt_amnt": 13.019501,
+              "debt_amnt_norm": -1.09027795665,
+              "instal_norm": 1.10365036239,
+              "cluster_labels": "regular",
+              "anomaly_score": 0.146790087371
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_clusters #3",
+          "q": {
+            "features": {
+              "loan_amnt": 21000,
+              "funded_amnt": 21000,
+              "funded_amnt_inv": 21000,
+              "term": "36 months",
+              "int_rate": 10.49,
+              "installment": 682.46,
+              "grade": "B",
+              "sub_grade": "B3",
+              "issue_date": "Nov-2014",
+              "zip_code": "995xx",
+              "addr_state": "AK",
+              "dti": 18.51,
+              "emp_title": "System Specialist",
+              "emp_length_month": 120,
+              "home_ownership": "MORTGAGE",
+              "verification_status": "Verified",
+              "pymnt_plan": "False",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation",
+              "loan_amnt_avg": 15906.25,
+              "loan_amnt_stddev": 8206.56697269,
+              "int_rate_avg": 11.145,
+              "installment_avg": 513.0975,
+              "debt_amnt": 126.323346,
+              "debt_amnt_norm": 0.775470288824,
+              "instal_norm": 1.04694468233,
+              "cluster_labels": "regular",
+              "anomaly_score": 0.163699143558
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_clusters #4",
+          "q": {
+            "features": {
+              "loan_amnt": 10000,
+              "funded_amnt": 10000,
+              "funded_amnt_inv": 10000,
+              "term": "60 months",
+              "int_rate": 17.14,
+              "installment": 249.28,
+              "grade": "D",
+              "sub_grade": "D4",
+              "issue_date": "Nov-2014",
+              "zip_code": "996xx",
+              "addr_state": "AK",
+              "dti": 39.94,
+              "emp_title": "Office Admin",
+              "emp_length_month": 12,
+              "home_ownership": "RENT",
+              "verification_status": "Source Verified",
+              "pymnt_plan": "False",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation",
+              "loan_amnt_avg": 15906.25,
+              "loan_amnt_stddev": 8206.56697269,
+              "int_rate_avg": 11.145,
+              "installment_avg": 513.0975,
+              "debt_amnt": 99.562432,
+              "debt_amnt_norm": 0.334804499037,
+              "instal_norm": -0.736916355364,
+              "cluster_labels": "regular",
+              "anomaly_score": 0.157566075949
+            }
+          }
+        },
+        {
+          "name": "loan_applications_features_clusters #5",
+          "q": {
+            "features": {
+              "loan_amnt": 14000,
+              "funded_amnt": 14000,
+              "funded_amnt_inv": 14000,
+              "term": "36 months",
+              "int_rate": 11.44,
+              "installment": 461.27,
+              "grade": "B",
+              "sub_grade": "B4",
+              "issue_date": "Nov-2014",
+              "zip_code": "997xx",
+              "addr_state": "AK",
+              "dti": 9.99,
+              "emp_title": "Maintenance Technician",
+              "emp_length_month": 12,
+              "home_ownership": "RENT",
+              "verification_status": "Not Verified",
+              "pymnt_plan": "False",
+              "purpose": "credit_card",
+              "title": "Credit card refinancing",
+              "loan_amnt_avg": 15906.25,
+              "loan_amnt_stddev": 8206.56697269,
+              "int_rate_avg": 11.145,
+              "installment_avg": 513.0975,
+              "debt_amnt": 46.080873,
+              "debt_amnt_norm": -0.545863980215,
+              "instal_norm": 0.136071089535,
+              "cluster_labels": "regular",
+              "anomaly_score": 0.158142148997
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #1",
+          "q": {
+            "features": {
+              "loan_amnt": 1000,
+              "funded_amnt": 1000,
+              "funded_amnt_inv": 1000,
+              "term": "36 months",
+              "int_rate": 12.39,
+              "installment": 33.41,
+              "grade": "C",
+              "sub_grade": "C1",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "567xx",
+              "addr_state": "MN",
+              "dti": 18.38,
+              "emp_title": "Attorney",
+              "emp_length_month": 36,
+              "home_ownership": "OWN",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "other",
+              "title": "Other"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #2",
+          "q": {
+            "features": {
+              "loan_amnt": 14575,
+              "funded_amnt": 14575,
+              "funded_amnt_inv": 14575,
+              "term": "36 months",
+              "int_rate": 11.99,
+              "installment": 484.03,
+              "grade": "B",
+              "sub_grade": "B5",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "840xx",
+              "addr_state": "UT",
+              "dti": 23,
+              "emp_title": "Workforce Manager",
+              "emp_length_month": 108,
+              "home_ownership": "RENT",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #3",
+          "q": {
+            "features": {
+              "loan_amnt": 15000,
+              "funded_amnt": 15000,
+              "funded_amnt_inv": 15000,
+              "term": "36 months",
+              "int_rate": 6.49,
+              "installment": 459.67,
+              "grade": "A",
+              "sub_grade": "A2",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "950xx",
+              "addr_state": "CA",
+              "dti": 11.48,
+              "emp_title": "Robotics Engineer",
+              "emp_length_month": 36,
+              "home_ownership": "RENT",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "credit_card",
+              "title": "Credit card refinancing"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #4",
+          "q": {
+            "features": {
+              "loan_amnt": 10000,
+              "funded_amnt": 10000,
+              "funded_amnt_inv": 10000,
+              "term": "36 months",
+              "int_rate": 6.03,
+              "installment": 304.36,
+              "grade": "A",
+              "sub_grade": "A1",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "545xx",
+              "addr_state": "WI",
+              "dti": 15.08,
+              "emp_title": "Manager",
+              "emp_length_month": 60,
+              "home_ownership": "RENT",
+              "verification_status": "Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation"
+            }
+          }
+        },
+        {
+          "name": "loan_applications_2012_clean #5",
+          "q": {
+            "features": {
+              "loan_amnt": 19950,
+              "funded_amnt": 19950,
+              "funded_amnt_inv": 19950,
+              "term": "60 months",
+              "int_rate": 19.99,
+              "installment": 528.45,
+              "grade": "E",
+              "sub_grade": "E3",
+              "issue_date": "Dec-2012",
+              "issue_d": "Dec-2012",
+              "zip_code": "787xx",
+              "addr_state": "TX",
+              "dti": 18.83,
+              "emp_title": "Owner",
+              "emp_length_month": 72,
+              "home_ownership": "MORTGAGE",
+              "verification_status": "Source Verified",
+              "loan_status": "ok",
+              "pymnt_plan": "n",
+              "purpose": "debt_consolidation",
+              "title": "Debt consolidation"
+            }
+          }
+        }
+      ],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "loandef_Keras",
+      "type": "STD_PREDICTION"
+    },
+    {
+      "modelRef": "wMjqHLEy",
+      "useJava": true,
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "test3",
+      "type": "STD_PREDICTION"
+    },
+    {
+      "modelRef": "NTgCPj6x",
+      "useJava": true,
+      "testQueries": [],
+      "enrichMapping": [],
+      "healthCheckQueries": [],
+      "id": "new_test",
+      "type": "STD_PREDICTION"
+    }
+  ],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

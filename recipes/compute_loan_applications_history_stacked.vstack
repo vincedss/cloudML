@@ -1,0 +1,180 @@
+{
+  "mode": "INTERSECT",
+  "selectedColumns": [
+    "loan_amnt",
+    "funded_amnt",
+    "funded_amnt_inv",
+    "term",
+    "int_rate",
+    "installment",
+    "grade",
+    "sub_grade",
+    "issue_date",
+    "zip_code",
+    "addr_state",
+    "dti",
+    "annual_inc",
+    "emp_title",
+    "emp_length_month",
+    "home_ownership",
+    "verification_status",
+    "loan_status",
+    "pymnt_plan",
+    "purpose",
+    "title"
+  ],
+  "originColumnName": "original_dataset",
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "loan_applications_2012_clean",
+      "index": 0
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "originLabel": "loans_application_history",
+      "index": 1
+    }
+  ],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "loan_amnt",
+            "type": "bigint"
+          },
+          {
+            "name": "funded_amnt",
+            "type": "bigint"
+          },
+          {
+            "name": "funded_amnt_inv",
+            "type": "double"
+          },
+          {
+            "name": "term",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "int_rate",
+            "type": "double"
+          },
+          {
+            "name": "installment",
+            "type": "double"
+          },
+          {
+            "name": "grade",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "sub_grade",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "issue_date",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "zip_code",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "addr_state",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "dti",
+            "type": "double"
+          },
+          {
+            "name": "annual_inc",
+            "type": "double"
+          },
+          {
+            "name": "emp_title",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "emp_length_month",
+            "type": "bigint"
+          },
+          {
+            "name": "home_ownership",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "verification_status",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "loan_status",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "pymnt_plan",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "purpose",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "maxLength": 4194304
+          }
+        ],
+        "userModified": false
+      }
+    },
+    "distinct": false,
+    "enabled": false
+  },
+  "addOriginColumn": false
+}

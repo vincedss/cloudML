@@ -1,0 +1,119 @@
+{
+  "inputDatasetSmartName": "loan_applications_history_stacked",
+  "script": {
+    "steps": [
+      {
+        "type": "FilterOnValue",
+        "params": {
+          "values": [
+            "car"
+          ],
+          "matchingMode": "FULL_STRING",
+          "normalizationMode": "EXACT",
+          "action": "KEEP_ROW",
+          "booleanMode": "AND",
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "purpose"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnsSelector",
+        "params": {
+          "keep": false,
+          "appliesTo": "COLUMNS",
+          "columns": [
+            "funded_amnt",
+            "funded_amnt_inv",
+            "int_rate",
+            "grade",
+            "sub_grade",
+            "issue_date",
+            "zip_code",
+            "dti",
+            "emp_title",
+            "verification_status",
+            "loan_status",
+            "pymnt_plan",
+            "desc",
+            "purpose",
+            "title"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "name": "SIMPLIFIED MODEL",
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1565180255498
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1565178320518
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "active": false,
+  "automationLocal": false,
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "id": "test",
+  "name": "Compute new partitions",
+  "params": {
+    "steps": [
+      {
+        "delayBetweenRetries": 10,
+        "id": "build_0_true_d_loan_application_2012_validation_SQL",
+        "maxRetriesOnFail": 0,
+        "name": "initial datasets",
+        "params": {
+          "builds": [
+            {
+              "itemId": "loan_applications_history",
+              "partitionsSpec": "",
+              "type": "DATASET"
+            },
+            {
+              "itemId": "loan_history_features",
+              "partitionsSpec": "",
+              "type": "DATASET"
+            }
+          ],
+          "jobType": "RECURSIVE_FORCED_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "build_0_true_m_W6TWxdXE_d_loans_application_history_enriched",
+        "maxRetriesOnFail": 0,
+        "name": "retrain model",
+        "params": {
+          "builds": [
+            {
+              "itemId": "wMjqHLEy",
+              "partitionsSpec": "",
+              "type": "SAVED_MODEL"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "DISABLED",
+        "type": "build_flowitem"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "check_false_m_wMjqHLEy",
+        "maxRetriesOnFail": 0,
+        "name": "model_AUC",
+        "params": {
+          "checks": [
+            {
+              "itemId": "NTgCPj6x",
+              "partitionsSpec": "LATEST",
+              "type": "SAVED_MODEL"
+            }
+          ],
+          "proceedOnFailure": false,
+          "warningsAsErrors": false
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_ALWAYS",
+        "type": "check_dataset"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "custom_python_5iExiPFHPycrgzLSklW8IQ",
+        "maxRetriesOnFail": 0,
+        "name": "compute partition list",
+        "params": {
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": true,
+          "script": "# this part can be used in a custom scenario's script, or in a \"Execute python\" step in a step-based scenario\nimport dataiku\nfrom dataiku.scenario import Scenario\n\ns = Scenario()\n\ndataset_name = 'loan_applications_live_raw'\noutput_name = 'loan_applications_live_scored'\n\n# fetch the partitions of input\nds = dataiku.Dataset(dataset_name)\ninput_partitions = ds.list_partitions()\nprint(\"Dataset %s has %s partitions\" % (dataset_name, len(input_partitions)))\n\n# fetch the partitions of output\ndg = dataiku.Dataset(output_name)\noutput_partitions = dg.list_partitions()\nprint(\"Dataset %s has %s partitions\" % (output_name, len(output_partitions)))\n\n# Compute diff between partition lists\npartitions_to_build = list(set(input_partitions) - set(output_partitions))\nprint(\"Partitions to build are %s\" % (partitions_to_build))\n\n# build the variable's value as a comma separated string\npartition_list_value = ','.join(partitions_to_build)\ns.set_scenario_variables(partition_list=partition_list_value)\n"
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "custom_python"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "build_0_true_d_loan_applications_features_clusters",
+        "maxRetriesOnFail": 0,
+        "name": "new partitions",
+        "params": {
+          "builds": [
+            {
+              "itemId": "loan_applications_live_features",
+              "partitionsSpec": "${partition_list}",
+              "type": "DATASET"
+            }
+          ],
+          "jobType": "RECURSIVE_FORCED_BUILD",
+          "proceedOnFailure": true,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "comp_metrics_d_loan_applications_2012_clean",
+        "maxRetriesOnFail": 0,
+        "name": "new partitions",
+        "params": {
+          "computes": [
+            {
+              "itemId": "loan_applications_live_features",
+              "partitionsSpec": "${partition_list}",
+              "type": "DATASET"
+            }
+          ],
+          "proceedOnFailure": false
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "compute_metrics"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "build_0_true",
+        "maxRetriesOnFail": 0,
+        "name": "score partitions",
+        "params": {
+          "builds": [],
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": true,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "report70a16f36b2588de1692e10db560ef8c2",
+        "maxRetriesOnFail": 0,
+        "name": "notify Users",
+        "params": {
+          "failOnMessageNotSent": false,
+          "messaging": {
+            "configuration": {
+              "asUser": false,
+              "channelId": "twitterbot",
+              "linkNames": false,
+              "message": "Hey, your scenario has run properly",
+              "messageMode": "TEXT_MESSAGE",
+              "mode": "WEBHOOK",
+              "useGlobalChannel": false,
+              "useProxy": true
+            },
+            "type": "slack-scenario"
+          }
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "send_report"
+      },
+      {
+        "delayBetweenRetries": 10,
+        "id": "clear__d_loan_applications_2014_scored",
+        "maxRetriesOnFail": 0,
+        "name": "duplicate partitions",
+        "params": {
+          "clears": [
+            {
+              "itemId": "loan_applications_live_scored",
+              "partitionsSpec": "Jan-2014/Feb-2014/Nov-2014/Dec-2014/Mar-2014",
+              "type": "DATASET"
+            }
+          ],
+          "proceedOnFailure": false
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_ALWAYS",
+        "type": "clear_items"
+      }
+    ]
+  },
+  "projectKey": "MLCREDITSCORING",
+  "reporters": [],
+  "tags": [],
+  "triggers": [
+    {
+      "active": true,
+      "delay": 5,
+      "id": "QSRKiR8d",
+      "name": "Daily Run",
+      "params": {
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "frequency": "Daily",
+        "hour": 2,
+        "minute": 0,
+        "monthlyRunOn": "ON_THE_DAY",
+        "repeatFrequency": 1,
+        "startingFrom": "2021-02-26T00:00:00.000+0000",
+        "timezone": "SERVER"
+      },
+      "type": "temporal"
+    },
+    {
+      "active": false,
+      "delay": 900,
+      "graceDelaySettings": {
+        "checkAgainAfterGraceDelay": true,
+        "delay": 120
+      },
+      "id": "H9jRwySx",
+      "params": {
+        "watches": []
+      },
+      "type": "ds_modified"
+    }
+  ],
+  "type": "step_based",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614303063972,
+    "versionNumber": 55
+  }
+}

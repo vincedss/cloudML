@@ -1,0 +1,30 @@
+{
+  "type": "jupyter",
+  "params": {
+    "notebookSmartName": "Correlations analysis on loan_applications_features",
+    "exportTimestamp": 0,
+    "loadLast": true
+  },
+  "owner": "vdestoecklin",
+  "listed": false,
+  "name": "Correlations analysis on loan_applications_features (2019-01-10 06:03)",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1547143403788
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1547143403788
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

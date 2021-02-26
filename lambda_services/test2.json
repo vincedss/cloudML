@@ -1,0 +1,11 @@
+{
+  "endpoints": [],
+  "publicAccess": true,
+  "authRealm": {
+    "queryKeys": []
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

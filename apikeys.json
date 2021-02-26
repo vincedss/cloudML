@@ -1,0 +1,442 @@
+[
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "z7VIrOQywltyzXd6",
+    "key": "OQ7KLiGx7RcUNeCIf9QE1eyLdkFTQ3vL",
+    "label": "Key for Web app Keras_model_webapp(UiTpZ5H)",
+    "createdOn": 1547068774184
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [],
+    "projectPrivileges": {
+      "admin": true,
+      "readProjectContent": true,
+      "writeProjectContent": false,
+      "exportDatasetsData": true,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "kACVpu3TIk06ZR9T",
+    "key": "os8kfiFPwxkxeQDb5hlewy7NDyT0AVTC",
+    "label": "Key for Web app test(akov3VD)",
+    "createdOn": 1553267824916
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [
+          "loan_application_2012_SQL"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_SCHEMA"
+        ]
+      },
+      {
+        "datasets": [
+          "loan_applications_2012_clean"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_SCHEMA"
+        ]
+      },
+      {
+        "datasets": [
+          "loan_applications_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_history_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_features"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_features"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_metrics_by_state"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_2012_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_application_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "metrics_model"
+        ],
+        "privileges": []
+      }
+    ],
+    "projectPrivileges": {
+      "admin": true,
+      "readProjectContent": true,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "qUnkX2b25y45Pied",
+    "key": "IBGFcMtnU3YST6k27ZcIWOxCcW4jtUuW",
+    "label": "Key for Web app scoring_form(bmOgb8p)",
+    "createdOn": 1553676006599
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [
+          "car_loans_simple"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "car_loans_simplified"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_application_2012_SQL"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_2012_clean"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_history_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_features"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_SCHEMA"
+        ]
+      },
+      {
+        "datasets": [
+          "loan_applications_live_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_features"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_SCHEMA"
+        ]
+      },
+      {
+        "datasets": [
+          "loan_metrics_by_state"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_2012_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_application_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "metrics_model"
+        ],
+        "privileges": []
+      }
+    ],
+    "projectPrivileges": {
+      "admin": false,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "Z4pRPgh96REkdy57",
+    "key": "ikMAsWjueWBMH2k4gLYM2G0RLqCHImsB",
+    "label": "Key for Web app Copy of inter_scoring(YZIz834)",
+    "createdOn": 1565180535403
+  },
+  {
+    "execSQLLike": false,
+    "localDatasets": [
+      {
+        "datasets": [
+          "car_loans_simple"
+        ],
+        "privileges": [
+          "READ_DATA",
+          "READ_SCHEMA"
+        ]
+      },
+      {
+        "datasets": [
+          "car_loans_simplified"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_application_2012_SQL"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_2012_clean"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_history_stacked"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_features"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_prepared"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_live_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_applications_raw"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_enriched"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_history_features"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loan_metrics_by_state"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_2012_scored"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "loans_application_history"
+        ],
+        "privileges": []
+      },
+      {
+        "datasets": [
+          "metrics_model"
+        ],
+        "privileges": []
+      }
+    ],
+    "projectPrivileges": {
+      "admin": true,
+      "readProjectContent": false,
+      "writeProjectContent": false,
+      "exportDatasetsData": false,
+      "readDashboards": false,
+      "writeDashboards": false,
+      "moderateDashboards": false,
+      "runScenarios": false,
+      "manageDashboardAuthorizations": false,
+      "manageExposedElements": false,
+      "manageAdditionalDashboardUsers": false,
+      "executeApp": false
+    },
+    "id": "NbfeBRhwUbXHwoh4",
+    "key": "j3U622VOsjzzhY6Zj9ExHLRGbLF4KyZj",
+    "label": "Key for Web app API webapp(1D1zwy2)",
+    "createdOn": 1565181821871
+  }
+]

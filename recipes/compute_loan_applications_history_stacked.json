@@ -1,0 +1,55 @@
+{
+  "type": "vstack",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_applications_2012_clean",
+          "deps": []
+        },
+        {
+          "ref": "loans_application_history",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_applications_history_stacked",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 6,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1594278609413
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Vincent"
+    },
+    "lastModifiedOn": 1520455834741
+  },
+  "tags": [
+    "Model V2"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

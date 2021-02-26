@@ -1,0 +1,94 @@
+{
+  "projectKey": "MLCREDITSCORING",
+  "id": "test_1",
+  "type": "step_based",
+  "name": "test",
+  "active": false,
+  "versionTag": {
+    "versionNumber": 15,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1566301825879
+  },
+  "checklists": {
+    "checklists": []
+  },
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "tags": [],
+  "triggers": [],
+  "reporters": [],
+  "params": {
+    "steps": [
+      {
+        "id": "custom_python_MBdD3pxIPw3XHLgrmaYX9A",
+        "type": "custom_python",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "script": "import dataiku\nfrom datetime import datetime, date, timedelta\nfrom dataiku.scenario import Scenario\n\ns \u003d Scenario()\n\ntime \u003d datetime.now().replace(hour\u003d20,minute\u003d0,second\u003d0,microsecond\u003d0)\ntime \u003d time - timedelta(days\u003d1)\ntime \u003d time.strftime(\"%m/%d/%Y, %H:%M:%S\")\n\ns.set_scenario_variables(time\u003dtime)",
+          "envSelection": {
+            "envMode": "INHERIT"
+          },
+          "proceedOnFailure": false
+        }
+      },
+      {
+        "id": "def_scenar_vars_snapshot",
+        "type": "define_vars",
+        "name": "Step #2",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "variables": {},
+          "definitions": [
+            {
+              "key": "snapshot",
+              "value": "inc(now(), -1, \u0027day\u0027)"
+            }
+          ],
+          "evaluateValues": true
+        }
+      },
+      {
+        "id": "set_project_vars",
+        "type": "set_project_vars",
+        "name": "Step #3",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionExpression": "",
+        "resetScenarioStatus": false,
+        "params": {
+          "variables": {},
+          "definitions": [
+            {
+              "key": "snapshot",
+              "value": "inc(now(), -1, \u0027day\u0027)"
+            }
+          ],
+          "evaluateValues": true
+        }
+      }
+    ]
+  },
+  "automationLocal": false,
+  "customFields": {}
+}

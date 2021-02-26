@@ -1,0 +1,30 @@
+{
+  "type": "web_app",
+  "params": {
+    "webAppSmartId": "oDU1rtx",
+    "webAppType": "webapp_dkulime_webapp_version-1"
+  },
+  "owner": "tgandhi",
+  "listed": false,
+  "name": "lime",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tgandhi"
+    },
+    "lastModifiedOn": 1557331133573
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "tgandhi"
+    },
+    "lastModifiedOn": 1557331133573
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

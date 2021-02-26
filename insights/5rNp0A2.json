@@ -1,0 +1,28 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "W6TWxdXE"
+  },
+  "owner": "admin",
+  "listed": false,
+  "name": "BASE MODEL - predict loan_status table",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1532512139142
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1532512139142
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

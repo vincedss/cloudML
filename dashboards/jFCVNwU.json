@@ -1,0 +1,197 @@
+{
+  "pages": [
+    {
+      "id": "x9sWRZM",
+      "grid": {
+        "tiles": [
+          {
+            "tileType": "TEXT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 12,
+              "height": 1
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "text": "#Portfolio Visualization",
+              "textAlign": "LEFT",
+              "isTransparent": false
+            },
+            "autoLoad": true,
+            "showTitle": "NO",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 1,
+              "left": 0,
+              "width": 6,
+              "height": 5
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "autoPlayAnimation": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "ScrYZJg",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 1,
+              "left": 6,
+              "width": 6,
+              "height": 5
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "autoPlayAnimation": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "rNbkVuO",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 17,
+              "left": 0,
+              "width": 6,
+              "height": 3
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showName": true,
+              "showDescription": true,
+              "showCustomFields": false,
+              "showStorageType": false,
+              "showMeaning": false,
+              "showProgressBar": false
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "RWbc3bs",
+            "insightType": "dataset_table",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 13,
+              "left": 6,
+              "width": 6,
+              "height": 6
+            },
+            "clickAction": "OPEN_INSIGHT",
+            "tileParams": {
+              "showXAxis": true,
+              "showYAxis": true,
+              "showLegend": false,
+              "showTooltips": true,
+              "autoPlayAnimation": true
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "Vw58OPQ",
+            "insightType": "chart",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
+      },
+      "title": "Porfolio Visualisation",
+      "showTitle": false
+    },
+    {
+      "id": "ZO4twpw",
+      "grid": {
+        "tiles": [
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 0,
+              "left": 0,
+              "width": 11,
+              "height": 13
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showCode": false
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "title": "Correlations analysis on loan_applications_features",
+            "insightId": "6QoUeWH",
+            "insightType": "jupyter",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": 16,
+              "left": 0,
+              "width": 12,
+              "height": 12
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "showCode": false
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "rTTHhUj",
+            "insightType": "jupyter",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
+          }
+        ]
+      },
+      "title": "Correlation Analysis",
+      "showTitle": true,
+      "backgroundColor": "#ffffff"
+    }
+  ],
+  "owner": "Vincent",
+  "listed": true,
+  "name": "Portfolio Analysis",
+  "showGrid": true,
+  "versionTag": {
+    "versionNumber": 68,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614145930463
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Vincent"
+    },
+    "lastModifiedOn": 1520449451185
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

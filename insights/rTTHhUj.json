@@ -1,0 +1,31 @@
+{
+  "type": "jupyter",
+  "params": {
+    "notebookSmartName": "Correlations analysis on loan_history_enriched (vdestoecklin)",
+    "exportTimestamp": 0,
+    "loadLast": true
+  },
+  "owner": "vdestoecklin",
+  "listed": false,
+  "name": "Correlations analysis on loan_history_enriched (vdestoecklin) (2021-02-24 05:50)",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614145842069
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614145842069
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

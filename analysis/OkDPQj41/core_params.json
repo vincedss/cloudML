@@ -1,0 +1,351 @@
+{
+  "inputDatasetSmartName": "loan_applications_history",
+  "script": {
+    "steps": [
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "SUBSTRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "%",
+              "to": ""
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "int_rate"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnSplitter",
+        "params": {
+          "inCol": "issue_date",
+          "separator": "-",
+          "outColPrefix": "issue_date_",
+          "keepEmptyChunks": false,
+          "target": "COLUMNS",
+          "limitOutput": false,
+          "limit": 0
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "DateParser",
+        "params": {
+          "outCol": "issue_date_parsed",
+          "lang": "auto",
+          "timezone_id": "UTC",
+          "formats": [
+            "MMM-yyyy"
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "issue_date"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "DateComponentsExtractor",
+        "params": {
+          "column": "issue_date_parsed",
+          "outYearColumn": "issue_date_parsed_year",
+          "outMonthColumn": "issue_date_parsed_month",
+          "outDayColumn": "issue_date_parsed_day",
+          "timezone_id": "UTC"
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ExtractNumbers",
+        "params": {
+          "input": "emp_length",
+          "output": "",
+          "replaceMultipliers": false,
+          "extractToJson": false,
+          "delimiter": "BEST_GUESS",
+          "multipleValues": true
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "TextSimplifierProcessor",
+        "params": {
+          "inCol": "desc",
+          "sortAlphabetically": false,
+          "clearStopWords": true,
+          "normalize": true,
+          "stem": true,
+          "language": "english"
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "FULL_STRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "111",
+              "to": "unknown"
+            },
+            {
+              "from": "222",
+              "to": "unknown"
+            },
+            {
+              "from": "333",
+              "to": "unknown"
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "purpose"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {
+      "home_ownership": {
+        "meaning": "Text"
+      }
+    },
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "type": "grouped_columns",
+        "variant": "normal",
+        "name": "Count by issue_date_parsed",
+        "userEditedName": false,
+        "genericDimension0": [
+          {
+            "column": "issue_date_parsed",
+            "type": "DATE",
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            },
+            "dateParams": {
+              "mode": "DAY_OF_WEEK"
+            },
+            "maxValues": 0,
+            "generateOthersCategory": true,
+            "oneTickPerBin": false,
+            "filters": [],
+            "isA": "dimension",
+            "possibleSorts": [
+              {
+                "type": "NATURAL",
+                "label": "Natural ordering",
+                "sortAscending": true
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Count of records, descending"
+              },
+              {
+                "type": "AGGREGATION",
+                "measureIdx": 0,
+                "label": "Count of records, ascending",
+                "sortAscending": true
+              }
+            ],
+            "sort": {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            }
+          }
+        ],
+        "genericDimension1": [],
+        "facetDimension": [],
+        "animationDimension": [],
+        "genericMeasures": [
+          {
+            "function": "COUNT",
+            "type": "NUMERICAL",
+            "displayed": true,
+            "isA": "measure",
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0
+          }
+        ],
+        "xDimension": [],
+        "yDimension": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "uaSize": [],
+        "uaShape": [],
+        "uaColor": [],
+        "uaTooltip": [],
+        "groupDimension": [],
+        "xMeasure": [],
+        "yMeasure": [],
+        "colorMeasure": [],
+        "sizeMeasure": [],
+        "geometry": [],
+        "tooltipMeasures": [],
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "filters": [],
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "includeZero": true,
+        "smoothing": true,
+        "showLegend": true,
+        "showXAxis": false,
+        "showInChartValues": false,
+        "showInChartLabels": true,
+        "strokeWidth": 1,
+        "fillOpacity": 0.6,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "hexbinRadius": 20,
+        "hexbinNumber": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "chartHeight": 200,
+        "singleXAxis": true,
+        "multiTooltips": false,
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "colorOptions": {
+          "singleColor": "#2678B1",
+          "transparency": 0.75,
+          "colorPalette": "default",
+          "ccScaleMode": "NORMAL",
+          "customPalette": {
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "colors": [],
+            "values": [],
+            "fixedValues": false
+          },
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0
+        },
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "xAxisMode": "NORMAL",
+        "yAxisMode": "NORMAL",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "mapOptions": {
+          "tilesLayer": "cartodb-positron",
+          "lockSquareGrid": false
+        },
+        "mapGridOptions": {
+          "gridLonDeg": 0.5,
+          "gridLatDeg": 0.5
+        },
+        "disableSafetyLimits": false,
+        "useLiveProcessingIfAvailable": true,
+        "legendPlacement": "OUTER_RIGHT"
+      }
+    }
+  ],
+  "name": "Analyze loan_applications_history",
+  "versionTag": {
+    "versionNumber": 2,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1543536333786
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1543536124254
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

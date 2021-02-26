@@ -1,0 +1,222 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "conditionsMode": "AND",
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": [
+        {
+          "column1": {
+            "name": "addr_state",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "addr_state",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "loan_amnt",
+      "table": 0
+    },
+    {
+      "name": "funded_amnt",
+      "table": 0
+    },
+    {
+      "name": "funded_amnt_inv",
+      "table": 0
+    },
+    {
+      "name": "term",
+      "table": 0
+    },
+    {
+      "name": "int_rate",
+      "table": 0
+    },
+    {
+      "name": "installment",
+      "table": 0
+    },
+    {
+      "name": "grade",
+      "table": 0
+    },
+    {
+      "name": "sub_grade",
+      "table": 0
+    },
+    {
+      "name": "issue_date",
+      "table": 0
+    },
+    {
+      "name": "issue_date_parsed",
+      "table": 0
+    },
+    {
+      "name": "issue_d",
+      "table": 0
+    },
+    {
+      "name": "zip_code",
+      "table": 0
+    },
+    {
+      "name": "addr_state",
+      "table": 0
+    },
+    {
+      "name": "dti",
+      "table": 0
+    },
+    {
+      "name": "emp_title",
+      "table": 0
+    },
+    {
+      "name": "emp_length_month",
+      "table": 0
+    },
+    {
+      "name": "home_ownership",
+      "table": 0
+    },
+    {
+      "name": "verification_status",
+      "table": 0
+    },
+    {
+      "name": "pymnt_plan",
+      "table": 0
+    },
+    {
+      "name": "desc",
+      "table": 0
+    },
+    {
+      "name": "purpose",
+      "table": 0
+    },
+    {
+      "name": "title",
+      "table": 0
+    },
+    {
+      "name": "loan_amnt_avg",
+      "table": 1
+    },
+    {
+      "name": "loan_amnt_sum",
+      "table": 1
+    },
+    {
+      "name": "int_rate_min",
+      "table": 1
+    },
+    {
+      "name": "int_rate_max",
+      "table": 1
+    },
+    {
+      "name": "int_rate_avg",
+      "table": 1
+    },
+    {
+      "name": "installment_avg",
+      "table": 1
+    },
+    {
+      "name": "dti_min",
+      "table": 1
+    },
+    {
+      "name": "dti_max",
+      "table": 1
+    },
+    {
+      "name": "dti_avg",
+      "table": 1
+    },
+    {
+      "name": "count",
+      "table": 1
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "engineType": "DSS",
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "index": 0,
+      "computedColumns": []
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "prefix": "state",
+      "index": 1,
+      "computedColumns": []
+    }
+  ],
+  "postFilter": {
+    "distinct": false,
+    "enabled": false
+  },
+  "computedColumns": [],
+  "enableAutoCastInJoinConditions": false
+}

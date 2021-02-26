@@ -1,0 +1,28 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "LjCiUJEi"
+  },
+  "owner": "vdestoecklin",
+  "listed": false,
+  "name": "Full report of model Clustering (PY_ISOLATION_FOREST) on loan_applications_features",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1542940108932
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1542940108932
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

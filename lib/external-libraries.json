@@ -1,0 +1,18 @@
+{
+  "gitReferences": {
+    "python/custom_models": {
+      "remote": "https://github.com/alexcombessie/dataiku-libs",
+      "checkout": "refs/heads/master",
+      "remotePath": "python/custom_dataiku_models",
+      "lastHash": "1d8b844dca362502535e6979c022f1378ae55108"
+    }
+  },
+  "pythonPath": [
+    "python",
+    "python/custom_models"
+  ],
+  "rsrcPath": [
+    "R"
+  ],
+  "importLibrariesFromProjects": []
+}

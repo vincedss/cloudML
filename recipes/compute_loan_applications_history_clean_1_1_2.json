@@ -1,0 +1,111 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineType": "DSS",
+    "engineParams": {
+      "spark": {
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {
+            "loan_applications_history": {
+              "repartition": 10
+            },
+            "Codes_Reference": {
+              "repartition": 10
+            },
+            "loan_application_2012_validation_SQL": {
+              "repartition": 10
+            },
+            "loan_application_2012_validation": {
+              "repartition": 10
+            },
+            "loan_application_2012_SQL": {
+              "repartition": 10
+            },
+            "loan_applications_live_raw": {
+              "repartition": 10
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "executionEngine": "SPARK_SUBMIT",
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVECLI_LOCAL",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
+      },
+      "hadoopConfigKeys": [],
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_applications_live_raw",
+          "deps": []
+        }
+      ]
+    },
+    "scriptDeps": {
+      "items": []
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_applications_live_prepared",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 6,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614212554151
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1550064998157
+  },
+  "tags": [
+    "Model V2"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

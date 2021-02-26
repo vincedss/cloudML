@@ -1,0 +1,189 @@
+{
+  "inputDatasetSmartName": "loan_applications_history",
+  "script": {
+    "steps": [
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "SUBSTRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "%",
+              "to": ""
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "int_rate"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnSplitter",
+        "params": {
+          "inCol": "issue_date",
+          "separator": "-",
+          "outColPrefix": "issue_date_",
+          "keepEmptyChunks": false,
+          "target": "COLUMNS",
+          "limitOutput": false,
+          "limit": 0
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "FULL_STRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "Self Employed",
+              "to": "Self"
+            },
+            {
+              "from": "State of California",
+              "to": "Self"
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "emp_title"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "FULL_STRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "OWN",
+              "to": "111"
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "home_ownership"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ExtractNumbers",
+        "params": {
+          "input": "emp_length",
+          "output": "",
+          "replaceMultipliers": false,
+          "extractToJson": false,
+          "delimiter": "BEST_GUESS",
+          "multipleValues": true
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "CreateColumnWithGREL",
+        "params": {
+          "column": "newcolumn_expression",
+          "expression": "if(contains(emp_length, \"months\"), emp_length/12, emp_length)"
+        },
+        "metaType": "PROCESSOR",
+        "preview": true,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {
+      "home_ownership": {
+        "meaning": "Text"
+      }
+    },
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "RANDOM_FIXED_NB_EXACT",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 1
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "name": "Analyze loan_applications_history",
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1528881417664
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1528880938146
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

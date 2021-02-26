@@ -1,0 +1,136 @@
+{
+  "inputDatasetSmartName": "loan_applications_history",
+  "script": {
+    "steps": [
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "SUBSTRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "%",
+              "to": ""
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "int_rate"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "ColumnSplitter",
+        "params": {
+          "inCol": "issue_date",
+          "separator": "-",
+          "outColPrefix": "issue_date_",
+          "keepEmptyChunks": false,
+          "target": "COLUMNS",
+          "limitOutput": false,
+          "limit": 0
+        },
+        "metaType": "PROCESSOR",
+        "preview": false,
+        "disabled": false,
+        "alwaysShowComment": false
+      },
+      {
+        "type": "FindReplace",
+        "params": {
+          "output": "",
+          "normalization": "EXACT",
+          "matching": "FULL_STRING",
+          "stopAfterFirstMatch": false,
+          "mapping": [
+            {
+              "from": "111",
+              "to": "CREDIT"
+            },
+            {
+              "from": "OWN",
+              "to": "CREDIT"
+            }
+          ],
+          "appliesTo": "SINGLE_COLUMN",
+          "columns": [
+            "home_ownership"
+          ]
+        },
+        "metaType": "PROCESSOR",
+        "preview": true,
+        "disabled": false,
+        "alwaysShowComment": false
+      }
+    ],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {},
+    "explorationSampling": {
+      "selection": {
+        "maxStoredBytes": 104857600,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {
+      "autoRefresh": true
+    },
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "name": "Analyze loan_applications_history",
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1523523593228
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1523523516456
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}

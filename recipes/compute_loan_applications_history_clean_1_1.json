@@ -1,0 +1,106 @@
+{
+  "type": "shaker",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "engineType": "DSS",
+    "engineParams": {
+      "spark": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "sparkConfig": {
+          "inheritConf": "default",
+          "conf": []
+        },
+        "executionEngine": "SPARK_SUBMIT",
+        "readParams": {
+          "map": {
+            "loan_applications_history": {
+              "repartition": 10,
+              "cache": false
+            },
+            "Codes_Reference": {
+              "repartition": 10,
+              "cache": false
+            },
+            "loan_application_2012_validation_SQL": {
+              "repartition": 10,
+              "cache": false
+            },
+            "loan_application_2012_validation": {
+              "repartition": 10,
+              "cache": false
+            },
+            "loan_application_2012_SQL": {
+              "repartition": 10,
+              "cache": false
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true
+      },
+      "hive": {
+        "inheritConf": "default",
+        "hiveconf": [],
+        "executionEngine": "HIVECLI_LOCAL",
+        "addDkuUdf": false,
+        "skipPrerunValidate": false
+      },
+      "impala": {
+        "forceStreamMode": true
+      },
+      "hadoopConfigKeys": [],
+      "maxThreads": 8
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "inputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_application_2012_SQL",
+          "deps": []
+        }
+      ]
+    },
+    "scriptDeps": {
+      "items": []
+    }
+  },
+  "outputs": {
+    "main": {
+      "items": [
+        {
+          "ref": "loan_applications_2012_clean",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "versionTag": {
+    "versionNumber": 22,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1566333266435
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1548354079370
+  },
+  "tags": [
+    "Model V2"
+  ],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

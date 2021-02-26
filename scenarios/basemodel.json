@@ -1,0 +1,145 @@
+{
+  "active": false,
+  "automationLocal": false,
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "delayedTriggersBehavior": {
+    "delayWhileRunning": true,
+    "squashDelayedTriggers": true,
+    "suppressTriggersWhileRunning": true
+  },
+  "id": "basemodel",
+  "name": "Retrain Baseline Model",
+  "params": {
+    "steps": [
+      {
+        "id": "build_0_true_d_loan_applications_history",
+        "name": "initial train set",
+        "params": {
+          "builds": [
+            {
+              "itemId": "loan_applications_history",
+              "partitionsSpec": "",
+              "type": "DATASET"
+            },
+            {
+              "itemId": "loans_application_history",
+              "partitionsSpec": "",
+              "type": "DATASET"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      },
+      {
+        "id": "build_0_true_m_1tb5roAc",
+        "name": "retrain model",
+        "params": {
+          "builds": [
+            {
+              "itemId": "1tb5roAc",
+              "partitionsSpec": "",
+              "type": "SAVED_MODEL"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      },
+      {
+        "id": "check_false",
+        "name": "model AUC",
+        "params": {
+          "checks": [
+            {
+              "itemId": "1tb5roAc",
+              "partitionsSpec": "LATEST",
+              "type": "SAVED_MODEL"
+            }
+          ],
+          "proceedOnFailure": true,
+          "warningsAsErrors": false
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "check_dataset"
+      },
+      {
+        "id": "build_0_true_d_2012_Scored_d_model_metrics",
+        "name": "validation_data",
+        "params": {
+          "builds": [],
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
+      }
+    ]
+  },
+  "projectKey": "MLCREDITSCORING",
+  "reporters": [],
+  "tags": [],
+  "triggers": [
+    {
+      "active": true,
+      "delay": 5,
+      "id": "wYoXvL6n",
+      "name": "Weekly run",
+      "params": {
+        "daysOfWeek": [
+          "Saturday"
+        ],
+        "frequency": "Daily",
+        "hour": 2,
+        "minute": 0,
+        "monthlyRunOn": "ON_THE_DAY",
+        "repeatFrequency": 1,
+        "startingFrom": "2021-02-26T00:00:00.000+0000",
+        "timezone": "SERVER"
+      },
+      "type": "temporal"
+    }
+  ],
+  "type": "step_based",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1566224566221,
+    "versionNumber": 20
+  }
+}

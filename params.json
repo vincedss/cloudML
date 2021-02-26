@@ -1,0 +1,343 @@
+{
+  "dashboardAuthorizations": {
+    "allAuthorized": false,
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "LjCiUJEi",
+          "objectType": "SAVED_MODEL"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "W6TWxdXE",
+          "objectType": "SAVED_MODEL"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "loans_application_history",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Correlations analysis on loan_applications_features",
+          "objectType": "JUPYTER_NOTEBOOK"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "vyy03Um",
+          "objectType": "WEB_APP"
+        },
+        "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "Correlations analysis on loan_history_enriched (vdestoecklin)",
+          "objectType": "JUPYTER_NOTEBOOK"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
+  },
+  "exposedObjects": {
+    "objects": [
+      {
+        "type": "WEB_APP",
+        "localName": "vyy03Um",
+        "rules": [
+          {
+            "targetProject": "SNOWFLAKELOANDEFAULTPREDICTION",
+            "appearOnFlow": true
+          }
+        ]
+      }
+    ]
+  },
+  "projectType": "REGULAR",
+  "projectAppType": "REGULAR",
+  "bundleExporterSettings": {
+    "exportOptions": {
+      "exportUploads": false,
+      "exportManagedFS": false,
+      "exportAnalysisModels": false,
+      "exportSavedModels": false,
+      "exportManagedFolders": false,
+      "exportModelEvaluationStores": false,
+      "exportAllInputDatasets": false,
+      "exportAllDatasets": false,
+      "exportAllInputManagedFolders": false,
+      "exportGitRepository": false,
+      "exportInsightsData": false,
+      "useManualPluginsInfo": false,
+      "includedDatasetsData": [],
+      "includedSavedModels": [
+        {
+          "id": "4mHQeDVb"
+        }
+      ],
+      "includedModelEvaluationStores": [],
+      "includedManagedFolders": [],
+      "shareAllInputDatasets": false
+    }
+  },
+  "owner": "admin",
+  "permissions": [],
+  "additionalDashboardUsers": {
+    "users": []
+  },
+  "tutorialProject": false,
+  "settings": {
+    "flowAnchorSourcesAndSinks": false,
+    "gitCommitMode": "AUTO",
+    "disableAutomaticTriggers": false,
+    "integrations": {
+      "integrations": []
+    },
+    "flowBuildSettings": {
+      "mergeSparkPipelines": false,
+      "pruneBeforeSparkPipelines": true,
+      "mergeSqlPipelines": false,
+      "pruneBeforeSqlPipelines": true
+    },
+    "limitsSettings": {
+      "memSampleBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "shakerMemTableBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "attachmentBytes": {
+        "soft": -1,
+        "hard": -1
+      }
+    },
+    "relocationSettings": {
+      "sqlLikeRecipesInitializationMode": "RESOLVED_TABLE_REFERENCES"
+    },
+    "recipeEnginesPreferences": {
+      "forbiddenEngines": [],
+      "enginesPreferenceOrder": [],
+      "forbiddenByRecipeType": {},
+      "preferenceByRecipeType": {}
+    },
+    "codeEnvs": {
+      "python": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "r": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "julia": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      }
+    },
+    "container": {
+      "containerMode": "NONE"
+    },
+    "datasetsCreationSettings": {
+      "useGlobal": true,
+      "preferedStorageFormats": "CSV_ESCAPING_NOGZIP_FORHIVE,CSV_EXCEL_GZIP,PARQUET_HIVE",
+      "virtualizable": false,
+      "allowUploadsWithoutConnection": true
+    },
+    "hiveEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sparkEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "SPARK_SUBMIT",
+      "useGlobalMetastore": false
+    },
+    "impalaEngineCreationSettings": {
+      "useGlobal": true,
+      "streamMode": true
+    },
+    "wikiSettings": {
+      "promoted": false
+    },
+    "cluster": {
+      "clusterMode": "INHERIT"
+    },
+    "k8sCluster": {
+      "clusterMode": "INHERIT"
+    },
+    "virtualWebAppBackendSettings": {
+      "mode": "INHERIT",
+      "preventOverride": false,
+      "infra": {
+        "containerSelection": {
+          "containerMode": "INHERIT"
+        },
+        "overrideGlobalK8sExposition": false,
+        "exposition": {
+          "type": "local_process",
+          "params": {}
+        },
+        "scaling": {
+          "initialReplicas": 1,
+          "hpa": false,
+          "hpaTargetCPUPercent": 0,
+          "hpaMetrics": [],
+          "hpaMinPods": 0,
+          "hpaMaxPods": 0,
+          "hpaAnnotations": []
+        },
+        "deploymentModifier": {}
+      }
+    }
+  },
+  "name": "DEV - ML Credit Scoring",
+  "imgPattern": 1,
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": []
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "versionTag": {
+    "versionNumber": 199,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1614306276874
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "Vincent"
+    },
+    "lastModifiedOn": 1520449451183
+  },
+  "description": "\n# Project Goal\n\nThe goal of the project is to predict the risk of default on loans for customers and advise them on how to reduce their risk. We use historical data from 2007 to 2012 to build machine learning models and use our [final model](saved_model:NTgCPj6x) to score incoming loan applications.\n\nWe perform data cleaning and feature engineering through visual recipes and python / SQL scripts and use [scenarios](scenario:test) to automate rebuilding of models and scoring of monthly partitions. The workflow runs on Snowflake (cloud SQL) architecture (SF console can be accessed [here](Snowflake console - https://om43152.us-east-1.snowflakecomputing.com/console/login#/?returnUrl\u003ddata%2Fdatabases) ).\n\nWe also provide a [webapp](web_app:jvSlkXS) that allows live scoring of applications with interpretability results.\n\nReports on historical data are also available through a [PowerBI report](https://app.powerbi.com/view?r\u003deyJrIjoiNjE4Mjc3OWQtMDQ0Yi00M2M1LWE0NGEtMmZlMDc0YmFjYTE2IiwidCI6IjdlZjU1ZDQwLTUzZDctNGQyYS05YjIwLWIwMTU1MTIxYmNiYiIsImMiOjl9).\n\u003cbr/\u003e\n\n# Data Sources\n\nThere are 3 input datasets: \n- 2007 to 2011 historical loan data with default - [CSV](dataset:loan_applications_history)\n- 2012 data, validation and enrichment dataset  - SQL\n- 2014 data - monthly data to score - SQL, partitioned\n\n\n\n\u003cp class\u003d\"text-center\"\u003e\n\u003ca href\u003d\"/projects/SNOWFLAKELOANDEFAULTPREDICTION/flow/\"  class\u003d\"btn btn-datasets-color btn-cta-big-mod\"\u003e\u003ci class\u003d\"icon-dku-sample_project\" class\u003d\"btn-cta-big-mod-icon\" /\u003e\u0026nbsp;Flow\u003c/a\u003e\u003cbr/\u003e\u003cbr/\u003e\n\u003c/p\u003e\n\n\n\n# Data Preparation \u0026 Feature Engineering\n\nWe do basic data cleaning and enrichment on the 2007-2011 data with a [prepare recipe](recipe:compute_loan_applications_history_clean) and train our first baseline model. Our AUC is 0.68 and we validate the model by scoring it against the 2012 data. We extract the [model metrics](dataset:metrics_model) and our validated dataset.\n\nNext, we need to improve our model. We stack the two datasets and perform enrichment by: \n- computing and joining state-level loan metrics with [visual recipes](recipe:compute_loan_application_2012_by_addr_state_1)\n- computing custom debt indicators with [python code](recipe:compute_loan_applications_features)\n\nWe retrain a series of [models ](saved_model:NTgCPj6x)to find the best AUC and export the results of model sessions on the [dashboard](dashboard:jFCVNwU).\nJupyter notebook on correlation matrix is also exposed via the dashbard\n\n\n\n\n# Visualization for business users\n[Link to PowerBI dashboard](https://app.powerbi.com/view?r\u003deyJrIjoiNjE4Mjc3OWQtMDQ0Yi00M2M1LWE0NGEtMmZlMDc0YmFjYTE2IiwidCI6IjdlZjU1ZDQwLTUzZDctNGQyYS05YjIwLWIwMTU1MTIxYmNiYiIsImMiOjl9)\n\n",
+  "shortDesc": "Predict default on consumer loans over Snowflake architecture\nThe project *MLCREDITSCORING* was copied from *SNOWFLAKELOANDEFAULTPREDICTION* by Vincent de Stoecklin on Feb 13th 2019",
+  "tags": [
+    "scoring",
+    "bank",
+    "snowflake",
+    "duplicated",
+    "imported"
+  ],
+  "customFields": {
+    "gdpr_forbid_dataset_export": false,
+    "gdpr_forbid_dataset_sharing": false,
+    "gdpr_forbid_model_creation": false,
+    "gdpr_forbid_uploaded_datasets": false,
+    "gdpr_forbidden_connections": []
+  },
+  "checklists": {
+    "checklists": [
+      {
+        "title": "Your new project\u0027s Todo",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": true,
+            "text": "Create the project",
+            "createdOn": 1520449451183,
+            "createdBy": "Vincent",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Set a project image (click on the color next to the project title)",
+            "createdOn": 1520449451183,
+            "createdBy": "Vincent",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Import your [first dataset](projects/LOANDEFAULTPREDICTION/datasets/new/)",
+            "createdOn": 1520449451183,
+            "createdBy": "Vincent",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Invite [other users](projects/LOANDEFAULTPREDICTION/settings/security/permissions) to collaborate",
+            "createdOn": 1520449451183,
+            "createdBy": "Vincent",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Organize your work by replacing this with a real todo",
+            "createdOn": 1520449451183,
+            "createdBy": "Vincent",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "joins": [
+    {
+      "table2": 1,
+      "table1": 0,
+      "conditionsMode": "AND",
+      "type": "LEFT",
+      "outerJoinOnTheLeft": true,
+      "on": [
+        {
+          "column1": {
+            "name": "addr_state",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "column2": {
+            "name": "addr_state",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false
+        }
+      ]
+    }
+  ],
+  "selectedColumns": [
+    {
+      "name": "loan_amnt",
+      "type": "bigint",
+      "table": 0
+    },
+    {
+      "name": "funded_amnt",
+      "type": "bigint",
+      "table": 0
+    },
+    {
+      "name": "funded_amnt_inv",
+      "type": "double",
+      "table": 0
+    },
+    {
+      "name": "term",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "int_rate",
+      "type": "double",
+      "table": 0
+    },
+    {
+      "name": "installment",
+      "type": "double",
+      "table": 0
+    },
+    {
+      "name": "grade",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "sub_grade",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "issue_date",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "zip_code",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "addr_state",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "dti",
+      "type": "double",
+      "table": 0
+    },
+    {
+      "name": "emp_title",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "emp_length_month",
+      "type": "bigint",
+      "table": 0
+    },
+    {
+      "name": "home_ownership",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "verification_status",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "loan_status",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "pymnt_plan",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "purpose",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "table": 0
+    },
+    {
+      "name": "loan_amnt_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "loan_amnt_sum",
+      "type": "bigint",
+      "table": 1
+    },
+    {
+      "name": "int_rate_min",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "int_rate_max",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "int_rate_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "installment_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "dti_min",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "dti_max",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "dti_avg",
+      "type": "double",
+      "table": 1
+    },
+    {
+      "name": "count",
+      "type": "bigint",
+      "table": 1
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "virtualInputs": [
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "index": 0,
+      "computedColumns": []
+    },
+    {
+      "preFilter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "autoSelectColumns": false,
+      "prefix": "state",
+      "index": 1,
+      "computedColumns": []
+    }
+  ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "loan_amnt",
+            "type": "bigint"
+          },
+          {
+            "name": "funded_amnt",
+            "type": "bigint"
+          },
+          {
+            "name": "funded_amnt_inv",
+            "type": "double"
+          },
+          {
+            "name": "term",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "int_rate",
+            "type": "double"
+          },
+          {
+            "name": "installment",
+            "type": "double"
+          },
+          {
+            "name": "grade",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "sub_grade",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "issue_date",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "zip_code",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "addr_state",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "dti",
+            "type": "double"
+          },
+          {
+            "name": "emp_title",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "emp_length_month",
+            "type": "bigint"
+          },
+          {
+            "name": "home_ownership",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "verification_status",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "loan_status",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "pymnt_plan",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "purpose",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "state_loan_amnt_avg",
+            "type": "double"
+          },
+          {
+            "name": "state_loan_amnt_sum",
+            "type": "bigint"
+          },
+          {
+            "name": "state_int_rate_min",
+            "type": "double"
+          },
+          {
+            "name": "state_int_rate_max",
+            "type": "double"
+          },
+          {
+            "name": "state_int_rate_avg",
+            "type": "double"
+          },
+          {
+            "name": "state_installment_avg",
+            "type": "double"
+          },
+          {
+            "name": "state_dti_min",
+            "type": "double"
+          },
+          {
+            "name": "state_dti_max",
+            "type": "double"
+          },
+          {
+            "name": "state_dti_avg",
+            "type": "double"
+          },
+          {
+            "name": "state_count",
+            "type": "bigint"
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
+  "enableAutoCastInJoinConditions": false
+}

@@ -1,0 +1,56 @@
+{
+  "type": "SHINY",
+  "hasLegacyBackendURL": false,
+  "params": {
+    "autoStartBackend": false,
+    "envSelection": {
+      "envMode": "USE_BUILTIN_MODE",
+      "envName": "r_shiny"
+    },
+    "runAs": "vdestoecklin",
+    "infra": {
+      "containerSelection": {
+        "containerMode": "INHERIT"
+      },
+      "overrideGlobalK8sExposition": false,
+      "exposition": {
+        "type": "local_process",
+        "params": {}
+      },
+      "scaling": {
+        "initialReplicas": 1,
+        "hpa": false,
+        "hpaTargetCPUPercent": 0,
+        "hpaMetrics": [],
+        "hpaMinPods": 0,
+        "hpaMaxPods": 0,
+        "hpaAnnotations": []
+      },
+      "deploymentModifier": {}
+    },
+    "forceAuthentication": false
+  },
+  "config": {},
+  "name": "API call loans V2",
+  "versionTag": {
+    "versionNumber": 49,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1614212404579
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1566478256689
+  },
+  "description": "    fluidRow(align \u003d \"center\",\n            tags$div(class \u003d \"header\", checked \u003d NA,\n            tags$p(\"Ready to take the Shiny tutorial? If so\"),\n            tags$a(href \u003d \"shiny.rstudio.com/tutorial\", \"Click Here!\"),\n            tags$progress(value\u003d\"22\", max\u003d\"100\"),\n            br(),         \n            tags$meter(value\u003d\"0.2\", low\u003d\"0.3\", high\u003d\"0.9\")                       \n                    )\n        ),",
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  },
+  "customFields": {},
+  "isVirtual": false
+}

@@ -1,0 +1,28 @@
+{
+  "type": "saved-model_report",
+  "params": {
+    "savedModelSmartId": "LjCiUJEi"
+  },
+  "owner": "vdestoecklin",
+  "listed": false,
+  "name": "Isolation Forest - Anomaly Detection",
+  "dashboardCreationId": "jFCVNwU",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1547052568599
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "vdestoecklin"
+    },
+    "lastModifiedOn": 1547052568599
+  },
+  "tags": [],
+  "checklists": {
+    "checklists": []
+  }
+}
