@@ -15,6 +15,9 @@
             },
             "Codes_Reference": {
               "repartition": 10
+            },
+            "loan_applications_history_copy": {
+              "repartition": 10
             }
           }
         },
@@ -79,11 +82,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 24,
+    "versionNumber": 25,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1614311262060
+    "lastModifiedOn": 1614311265844
   },
   "creationTag": {
     "versionNumber": 0,
