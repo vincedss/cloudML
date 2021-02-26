@@ -2448,7 +2448,8 @@
     "envMode": "USE_BUILTIN_MODE"
   },
   "containerSelection": {
-    "containerMode": "INHERIT"
+    "containerMode": "EXPLICIT_CONTAINER",
+    "containerConf": "Ray_aks"
   },
   "sparkParams": {
     "sparkConf": {
