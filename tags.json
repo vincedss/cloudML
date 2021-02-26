@@ -6,13 +6,21 @@
     "duplicated": {
       "color": "#3A85AD"
     },
-    "snowflake": {},
-    "scoring": {},
-    "bank": {},
+    "snowflake": {
+      "color": "#FFD83D"
+    },
+    "scoring": {
+      "color": "#94be8e"
+    },
+    "bank": {
+      "color": "#90a8b7"
+    },
     "Scoring 2014": {
       "color": "#ee874a"
     },
-    "recipe-editor": {},
+    "recipe-editor": {
+      "color": "#1ac2ab"
+    },
     "imported": {
       "color": "#263238"
     },
