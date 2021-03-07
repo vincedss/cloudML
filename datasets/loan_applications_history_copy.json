@@ -1,5 +1,5 @@
 {
-  "type": "Filesystem",
+  "type": "Azure",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -24,7 +24,7 @@
     }
   },
   "formatParams": {
-    "style": "unix",
+    "style": "excel",
     "charset": "utf8",
     "separator": "\t",
     "quoteChar": "\"",
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1614311241604
+    "lastModifiedOn": 1615115934621
   },
   "creationTag": {
     "versionNumber": 0,
@@ -74,8 +74,12 @@
   },
   "tags": [],
   "params": {
-    "connection": "filesystem_managed",
-    "path": "${projectKey}/loan_applications_history_copy",
+    "container": "prashantcon",
+    "baseBlockID": 0,
+    "metastoreSynchronizationEnabled": true,
+    "metastoreTableName": "loan_applications_history_copy",
+    "connection": "ADLS",
+    "path": "/${instance}_dataiku/${projectKey}/loan_applications_history_copy",
     "notReadyIfEmpty": false,
     "filesSelectionRules": {
       "mode": "ALL",
