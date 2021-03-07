@@ -3,42 +3,40 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
-    "engineType": "DSS",
+    "engineType": "SPARK",
     "engineParams": {
       "spark": {
-        "pipelineAllowStart": true,
-        "pipelineAllowMerge": true,
+        "readParams": {
+          "mode": "AUTO",
+          "autoModeRepartitionInto": 10,
+          "map": {
+            "loan_applications_history": {
+              "repartition": 10
+            },
+            "Codes_Reference": {
+              "repartition": 10
+            },
+            "loan_application_2012_validation_SQL": {
+              "repartition": 10
+            },
+            "loan_application_2012_validation": {
+              "repartition": 10
+            },
+            "loan_application_2012_SQL": {
+              "repartition": 10
+            }
+          }
+        },
+        "useGlobalMetastore": false,
+        "useNativeProcessors": true,
         "sparkConfig": {
           "inheritConf": "default",
           "conf": []
         },
         "executionEngine": "SPARK_SUBMIT",
-        "readParams": {
-          "map": {
-            "loan_applications_history": {
-              "repartition": 10,
-              "cache": false
-            },
-            "Codes_Reference": {
-              "repartition": 10,
-              "cache": false
-            },
-            "loan_application_2012_validation_SQL": {
-              "repartition": 10,
-              "cache": false
-            },
-            "loan_application_2012_validation": {
-              "repartition": 10,
-              "cache": false
-            },
-            "loan_application_2012_SQL": {
-              "repartition": 10,
-              "cache": false
-            }
-          }
-        },
-        "useGlobalMetastore": false,
-        "useNativeProcessors": true
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true,
+        "skipPrerunValidate": false
       },
       "hive": {
         "inheritConf": "default",
@@ -51,6 +49,10 @@
         "forceStreamMode": true
       },
       "hadoopConfigKeys": [],
+      "sqlPipelineParams": {
+        "pipelineAllowStart": true,
+        "pipelineAllowMerge": true
+      },
       "maxThreads": 8
     }
   },
@@ -59,6 +61,8 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
@@ -82,12 +86,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1566333266435
+    "lastModifiedOn": 1615116032480
   },
   "creationTag": {
     "versionNumber": 0,
