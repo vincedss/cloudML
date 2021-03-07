@@ -1,5 +1,5 @@
 {
-  "type": "Filesystem",
+  "type": "Synapse",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1594279157710
+    "lastModifiedOn": 1615115975764
   },
   "creationTag": {
     "versionNumber": 0,
@@ -77,15 +77,17 @@
     "Model V2"
   ],
   "params": {
-    "connection": "filesystem_managed",
-    "path": "${projectKey}/loans_application_history",
+    "connection": "Synapse",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    }
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${instance}_${projectKey}_loans_application_history",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
   },
   "schema": {
     "columns": [
@@ -196,11 +198,13 @@
       },
       {
         "name": "newcol",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       }
     ],
     "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {

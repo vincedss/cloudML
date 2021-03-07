@@ -1,5 +1,5 @@
 {
-  "type": "Filesystem",
+  "type": "Synapse",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1591715534696
+    "lastModifiedOn": 1615115975759
   },
   "creationTag": {
     "versionNumber": 0,
@@ -76,15 +76,17 @@
     "Model V2"
   ],
   "params": {
-    "connection": "filesystem_managed",
-    "path": "${projectKey}/loan_applications_2012_clean",
+    "connection": "Synapse",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    }
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${instance}_${projectKey}_loan_applications_2012_clean",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
   },
   "schema": {
     "columns": [
@@ -193,6 +195,7 @@
     ],
     "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {
