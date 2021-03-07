@@ -1,5 +1,5 @@
 {
-  "type": "Filesystem",
+  "type": "Synapse",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1591715534668
+    "lastModifiedOn": 1615115990827
   },
   "creationTag": {
     "versionNumber": 0,
@@ -74,15 +74,17 @@
   },
   "tags": [],
   "params": {
-    "connection": "filesystem_managed",
-    "path": "${projectKey}/car_loans_simple",
+    "connection": "Synapse",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    }
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${instance}_${projectKey}_car_loans_simple",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
   },
   "schema": {
     "columns": [
@@ -92,7 +94,8 @@
       },
       {
         "name": "term",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "int_rate",
@@ -104,7 +107,8 @@
       },
       {
         "name": "addr_state",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "dti",
@@ -120,15 +124,18 @@
       },
       {
         "name": "home_ownership",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "loan_status",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       }
     ],
     "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {

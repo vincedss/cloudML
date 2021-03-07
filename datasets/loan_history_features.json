@@ -1,5 +1,5 @@
 {
-  "type": "Filesystem",
+  "type": "Synapse",
   "managed": true,
   "formatType": "csv",
   "checklists": {
@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1614299361215
+    "lastModifiedOn": 1615115990849
   },
   "creationTag": {
     "versionNumber": 0,
@@ -74,15 +74,17 @@
   },
   "tags": [],
   "params": {
-    "connection": "filesystem_managed",
-    "path": "${projectKey}/loan_history_features",
+    "connection": "Synapse",
     "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    }
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${instance}_${projectKey}_loan_history_features",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
   },
   "schema": {
     "columns": [
@@ -100,7 +102,8 @@
       },
       {
         "name": "term",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "int_rate",
@@ -112,23 +115,28 @@
       },
       {
         "name": "grade",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "sub_grade",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "issue_date",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "zip_code",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "addr_state",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "dti",
@@ -136,7 +144,8 @@
       },
       {
         "name": "emp_title",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "emp_length_month",
@@ -144,27 +153,33 @@
       },
       {
         "name": "home_ownership",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "verification_status",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "loan_status",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "pymnt_plan",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "purpose",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "title",
-        "type": "string"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "state_loan_amnt_avg",
@@ -219,8 +234,9 @@
         "type": "double"
       }
     ],
-    "userModified": false
+    "userModified": true
   },
+  "dkuProperties": [],
   "metrics": {
     "probes": [
       {
