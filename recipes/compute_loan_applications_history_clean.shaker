@@ -203,35 +203,6 @@
         "column": "annual_inc"
       },
       "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "GROUP",
-      "disabled": false,
-      "steps": [],
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "test",
-        "column": "newcolumn_expression"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": true,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "\"random\"",
-        "column": "newcol"
-      },
-      "alwaysShowComment": false
     }
   ],
   "maxProcessedMemTableBytes": -1,
