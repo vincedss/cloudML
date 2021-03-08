@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 10,
+    "versionNumber": 11,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615187755988
+    "lastModifiedOn": 1615190115133
   },
   "creationTag": {
     "versionNumber": 0,
@@ -175,7 +175,8 @@
       },
       {
         "name": "pymnt_plan",
-        "type": "boolean"
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "desc",
