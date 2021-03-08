@@ -20,7 +20,8 @@
       "maxStoredBytes": 104857600,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL"
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
     },
     "autoRefreshSample": false
   },
@@ -139,13 +140,8 @@
     },
     {
       "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 2
-        }
-      },
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "ColumnSplitter",
       "params": {
         "inCol": "emp_length",
@@ -161,7 +157,7 @@
     {
       "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "FindReplace",
       "params": {
         "output": "",
@@ -195,7 +191,7 @@
     {
       "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "ColumnsSelector",
       "params": {
         "columns": [
@@ -209,9 +205,9 @@
       "alwaysShowComment": false
     },
     {
-      "preview": true,
+      "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "DateParser",
       "params": {
         "outCol": "issue_date_parsed",
@@ -235,6 +231,31 @@
     "autoRefreshSample": false
   },
   "analysisColumnData": {},
+  "columnWidthsByName": {
+    "issue_date_parsed": 183,
+    "funded_amnt": 100,
+    "emp_length": 120,
+    "purpose": 141,
+    "issue_d": 100,
+    "emp_title": 204,
+    "home_ownership": 120,
+    "verification_status": 183,
+    "title": 218,
+    "zip_code": 100,
+    "addr_state": 100,
+    "issue_date": 120,
+    "pymnt_plan": 100,
+    "funded_amnt_inv": 128,
+    "installment": 100,
+    "grade": 100,
+    "dti": 100,
+    "loan_amnt": 100,
+    "term": 100,
+    "emp_length_month": 135,
+    "int_rate": 100,
+    "sub_grade": 100,
+    "desc": 211
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
