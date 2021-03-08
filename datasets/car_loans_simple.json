@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615115990827
+    "lastModifiedOn": 1615207173660
   },
   "creationTag": {
     "versionNumber": 0,
@@ -129,6 +129,11 @@
       },
       {
         "name": "loan_status",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "desc",
         "type": "string",
         "maxLength": 4000
       }
