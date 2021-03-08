@@ -5,18 +5,7 @@
   },
   "keys": [
     {
-      "countDistinct": false,
-      "min": false,
-      "avg": false,
-      "last": false,
-      "max": false,
-      "column": "addr_state",
-      "count": false,
-      "sum": false,
-      "concat": false,
-      "type": "string",
-      "stddev": false,
-      "first": false
+      "column": "addr_state"
     }
   ],
   "values": [
@@ -26,7 +15,6 @@
       "firstLastNotNull": false,
       "column": "loan_amnt",
       "count": false,
-      "$idx": 0,
       "sum": true,
       "concat": false,
       "type": "bigint",
@@ -44,7 +32,6 @@
       "firstLastNotNull": false,
       "column": "funded_amnt",
       "count": false,
-      "$idx": 1,
       "sum": false,
       "concat": false,
       "type": "bigint",
@@ -62,7 +49,6 @@
       "firstLastNotNull": false,
       "column": "funded_amnt_inv",
       "count": false,
-      "$idx": 2,
       "sum": false,
       "concat": false,
       "type": "double",
@@ -80,7 +66,6 @@
       "firstLastNotNull": false,
       "column": "term",
       "count": false,
-      "$idx": 3,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -98,7 +83,6 @@
       "firstLastNotNull": false,
       "column": "int_rate",
       "count": false,
-      "$idx": 4,
       "sum": false,
       "concat": false,
       "type": "double",
@@ -116,7 +100,6 @@
       "firstLastNotNull": false,
       "column": "installment",
       "count": false,
-      "$idx": 5,
       "sum": false,
       "concat": false,
       "type": "double",
@@ -134,7 +117,6 @@
       "firstLastNotNull": false,
       "column": "grade",
       "count": false,
-      "$idx": 6,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -152,7 +134,6 @@
       "firstLastNotNull": false,
       "column": "sub_grade",
       "count": false,
-      "$idx": 7,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -170,7 +151,6 @@
       "firstLastNotNull": false,
       "column": "issue_date",
       "count": false,
-      "$idx": 8,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -188,7 +168,6 @@
       "firstLastNotNull": false,
       "column": "zip_code",
       "count": false,
-      "$idx": 9,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -206,7 +185,6 @@
       "firstLastNotNull": false,
       "column": "dti",
       "count": false,
-      "$idx": 10,
       "sum": false,
       "concat": false,
       "type": "double",
@@ -224,13 +202,13 @@
       "firstLastNotNull": false,
       "column": "annual_inc",
       "count": false,
-      "$idx": 11,
       "sum": false,
       "concat": false,
       "type": "double",
       "concatDistinct": false,
-      "countDistinct": false,
+      "sum2": false,
       "min": false,
+      "countDistinct": false,
       "avg": true,
       "stddev": false,
       "first": false
@@ -241,7 +219,6 @@
       "firstLastNotNull": false,
       "column": "emp_title",
       "count": false,
-      "$idx": 12,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -259,7 +236,6 @@
       "firstLastNotNull": false,
       "column": "emp_length_month",
       "count": false,
-      "$idx": 13,
       "sum": false,
       "concat": false,
       "type": "bigint",
@@ -277,7 +253,6 @@
       "firstLastNotNull": false,
       "column": "home_ownership",
       "count": false,
-      "$idx": 14,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -295,7 +270,6 @@
       "firstLastNotNull": false,
       "column": "verification_status",
       "count": false,
-      "$idx": 15,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -313,7 +287,6 @@
       "firstLastNotNull": false,
       "column": "loan_status",
       "count": false,
-      "$idx": 16,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -331,7 +304,6 @@
       "firstLastNotNull": false,
       "column": "pymnt_plan",
       "count": false,
-      "$idx": 17,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -349,7 +321,6 @@
       "firstLastNotNull": false,
       "column": "purpose",
       "count": false,
-      "$idx": 18,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -367,7 +338,6 @@
       "firstLastNotNull": false,
       "column": "title",
       "count": false,
-      "$idx": 19,
       "sum": false,
       "concat": false,
       "type": "string",
@@ -389,15 +359,22 @@
       "addDkuUdf": false,
       "executionEngine": "HIVESERVER2"
     },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
     "impala": {
       "forceStreamMode": true
     },
     "lowerCaseSchemaIfEngineRequiresIt": true,
     "sparkSQL": {
+      "skipPrerunValidate": false,
       "pipelineAllowMerge": true,
       "useGlobalMetastore": false,
       "pipelineAllowStart": true,
       "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
         "map": {}
       },
       "overwriteOutputSchema": false,
@@ -408,71 +385,11 @@
       }
     }
   },
-  "engineType": "DSS",
+  "engineType": "SQL",
   "enlargeYourBits": true,
   "outputColumnNameOverrides": {},
   "computedColumns": [],
   "postFilter": {
-    "$status": {
-      "schema": {
-        "columns": [
-          {
-            "name": "addr_state",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "loan_amnt_avg",
-            "type": "double"
-          },
-          {
-            "name": "loan_amnt_sum",
-            "type": "bigint"
-          },
-          {
-            "name": "int_rate_min",
-            "type": "double"
-          },
-          {
-            "name": "int_rate_max",
-            "type": "double"
-          },
-          {
-            "name": "int_rate_avg",
-            "type": "double"
-          },
-          {
-            "name": "installment_avg",
-            "type": "double"
-          },
-          {
-            "name": "dti_min",
-            "type": "double"
-          },
-          {
-            "name": "dti_max",
-            "type": "double"
-          },
-          {
-            "name": "dti_avg",
-            "type": "double"
-          },
-          {
-            "name": "annual_inc_avg",
-            "type": "double"
-          },
-          {
-            "name": "emp_length_month_avg",
-            "type": "double"
-          },
-          {
-            "name": "count",
-            "type": "bigint"
-          }
-        ],
-        "userModified": false
-      }
-    },
     "distinct": false,
     "enabled": false
   }

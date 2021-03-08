@@ -191,7 +191,7 @@
       }
     }
   },
-  "engineType": "DSS",
+  "engineType": "SQL",
   "virtualInputs": [
     {
       "preFilter": {

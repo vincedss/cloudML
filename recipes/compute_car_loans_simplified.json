@@ -3,6 +3,7 @@
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
+    "engineType": "SQL",
     "engineParams": {
       "spark": {
         "readParams": {
@@ -48,6 +49,8 @@
   },
   "redispatchPartitioning": false,
   "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
   "inputs": {
     "main": {
       "items": [
@@ -68,12 +71,13 @@
       ]
     }
   },
+  "labels": [],
   "versionTag": {
-    "versionNumber": 9,
+    "versionNumber": 10,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1586270335854
+    "lastModifiedOn": 1615186981076
   },
   "creationTag": {
     "versionNumber": 0,
