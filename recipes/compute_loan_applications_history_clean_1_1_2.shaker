@@ -180,10 +180,10 @@
     {
       "preview": false,
       "metaType": "PROCESSOR",
-      "disabled": false,
+      "disabled": true,
       "type": "CreateColumnWithGREL",
       "params": {
-        "expression": "if(contains(emp_length_1, \"year\"), emp_length_0*12, emp_length_0)\t",
+        "expression": "if(contains(emp_length, \"year\"), emp_length_0*12, emp_length_0)",
         "column": "emp_length_month"
       },
       "alwaysShowComment": false
