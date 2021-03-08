@@ -58,6 +58,32 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
+      "type": "ExtractNumbers",
+      "params": {
+        "output": "",
+        "multipleValues": true,
+        "input": "emp_length",
+        "replaceMultipliers": false,
+        "delimiter": "BEST_GUESS",
+        "extractToJson": false
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "if(contains(emp_length, \"year\"), emp_length_0*12,\nemp_length_0)\t",
+        "column": "emp_length_0"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
       "type": "FindReplace",
       "params": {
         "output": "",
@@ -96,100 +122,14 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "FindReplace",
+      "type": "ColumnRenamer",
       "params": {
-        "output": "",
-        "mapping": [
+        "renamings": [
           {
-            "from": "n/a",
-            "to": "0"
+            "from": "emp_length_0",
+            "to": "emp_length_month"
           }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "emp_length"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "SUBSTRING"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "\u003c",
-            "to": ""
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "emp_length"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "SUBSTRING"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "designTimeReport": {
-        "report": {
-          "createdColumnCount": 2
-        }
-      },
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "ColumnSplitter",
-      "params": {
-        "inCol": "emp_length",
-        "keepEmptyChunks": false,
-        "limit": 0,
-        "separator": " ",
-        "outColPrefix": "emp_length_",
-        "limitOutput": false,
-        "target": "COLUMNS"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "FindReplace",
-      "params": {
-        "output": "",
-        "mapping": [
-          {
-            "from": "+",
-            "to": ""
-          }
-        ],
-        "normalization": "EXACT",
-        "columns": [
-          "emp_length_0"
-        ],
-        "appliesTo": "SINGLE_COLUMN",
-        "stopAfterFirstMatch": false,
-        "matching": "SUBSTRING"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "if(contains(emp_length_1, \"year\"), emp_length_0*12, emp_length_0)\t",
-        "column": "emp_length_month"
+        ]
       },
       "alwaysShowComment": false
     },
@@ -200,13 +140,45 @@
       "type": "ColumnsSelector",
       "params": {
         "columns": [
-          "desc",
-          "emp_length",
-          "emp_length_0",
-          "emp_length_1"
+          "emp_length"
         ],
         "keep": false,
-        "appliesTo": "COLUMNS"
+        "appliesTo": "SINGLE_COLUMN"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FindReplace",
+      "params": {
+        "output": "",
+        "mapping": [
+          {
+            "from": "333",
+            "to": "small_business"
+          },
+          {
+            "from": "222",
+            "to": "car"
+          },
+          {
+            "from": "111",
+            "to": "house"
+          },
+          {
+            "from": "major_purchase",
+            "to": "house"
+          }
+        ],
+        "normalization": "EXACT",
+        "columns": [
+          "purpose"
+        ],
+        "appliesTo": "SINGLE_COLUMN",
+        "stopAfterFirstMatch": false,
+        "matching": "FULL_STRING"
       },
       "alwaysShowComment": false
     },
@@ -230,28 +202,31 @@
   },
   "analysisColumnData": {},
   "columnWidthsByName": {
-    "loan_status": 100,
     "funded_amnt": 100,
-    "annual_inc": 106,
     "purpose": 141,
     "issue_d": 100,
-    "emp_title": 204,
-    "home_ownership": 120,
     "verification_status": 183,
     "title": 218,
     "zip_code": 100,
-    "addr_state": 100,
     "issue_date": 120,
     "pymnt_plan": 100,
+    "dti": 100,
+    "term": 100,
+    "int_rate": 100,
+    "sub_grade": 100,
+    "loan_status": 100,
+    "emp_length": 120,
+    "annual_inc": 106,
+    "emp_title": 204,
+    "home_ownership": 120,
+    "url": 100,
+    "addr_state": 100,
     "funded_amnt_inv": 128,
     "installment": 100,
     "grade": 100,
-    "dti": 100,
     "loan_amnt": 100,
-    "term": 100,
     "emp_length_month": 135,
-    "int_rate": 100,
-    "sub_grade": 100
+    "desc": 218
   },
   "sorting": [],
   "globalSearchQuery": "",
