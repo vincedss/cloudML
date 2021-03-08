@@ -122,17 +122,6 @@
       "preview": false,
       "metaType": "PROCESSOR",
       "disabled": false,
-      "type": "CreateColumnWithGREL",
-      "params": {
-        "expression": "if(join_Loan_Purpose \u003d\u003d \"\", purpose, join_Loan_Purpose)",
-        "column": "purpose"
-      },
-      "alwaysShowComment": false
-    },
-    {
-      "preview": false,
-      "metaType": "PROCESSOR",
-      "disabled": false,
       "type": "ColumnRenamer",
       "params": {
         "renamings": [
