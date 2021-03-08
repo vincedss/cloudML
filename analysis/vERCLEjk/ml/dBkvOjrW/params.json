@@ -1971,7 +1971,8 @@
     "envMode": "INHERIT"
   },
   "containerSelection": {
-    "containerMode": "INHERIT"
+    "containerMode": "EXPLICIT_CONTAINER",
+    "containerConf": "Ray_aks"
   },
   "sparkParams": {
     "sparkConf": {
