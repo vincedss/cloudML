@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615115975759
+    "lastModifiedOn": 1615187836798
   },
   "creationTag": {
     "versionNumber": 0,
@@ -160,7 +160,7 @@
       },
       {
         "name": "emp_length_month",
-        "type": "bigint"
+        "type": "double"
       },
       {
         "name": "home_ownership",
@@ -181,6 +181,11 @@
         "name": "pymnt_plan",
         "type": "string",
         "maxLength": 4194304
+      },
+      {
+        "name": "desc",
+        "type": "string",
+        "maxLength": 4000
       },
       {
         "name": "purpose",
