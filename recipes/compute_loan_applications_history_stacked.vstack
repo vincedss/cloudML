@@ -58,7 +58,7 @@
       }
     }
   },
-  "engineType": "SQL",
+  "engineType": "SPARK",
   "virtualInputs": [
     {
       "preFilter": {
@@ -78,110 +78,6 @@
     }
   ],
   "postFilter": {
-    "$status": {
-      "schema": {
-        "columns": [
-          {
-            "name": "loan_amnt",
-            "type": "bigint"
-          },
-          {
-            "name": "funded_amnt",
-            "type": "bigint"
-          },
-          {
-            "name": "funded_amnt_inv",
-            "type": "double"
-          },
-          {
-            "name": "term",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "int_rate",
-            "type": "double"
-          },
-          {
-            "name": "installment",
-            "type": "double"
-          },
-          {
-            "name": "grade",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "sub_grade",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "issue_date",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "zip_code",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "addr_state",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "dti",
-            "type": "double"
-          },
-          {
-            "name": "annual_inc",
-            "type": "double"
-          },
-          {
-            "name": "emp_title",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "emp_length_month",
-            "type": "bigint"
-          },
-          {
-            "name": "home_ownership",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "verification_status",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "loan_status",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "pymnt_plan",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "purpose",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
-            "name": "title",
-            "type": "string",
-            "maxLength": 4194304
-          }
-        ],
-        "userModified": false
-      }
-    },
     "distinct": false,
     "enabled": false
   },
