@@ -20,7 +20,8 @@
       "maxStoredBytes": 104857600,
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL"
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
     },
     "autoRefreshSample": false
   },
@@ -114,7 +115,8 @@
     "term": 100,
     "emp_length_month": 135,
     "int_rate": 100,
-    "home_ownership": 120
+    "home_ownership": 120,
+    "desc": 300
   },
   "sorting": [],
   "globalSearchQuery": "",
