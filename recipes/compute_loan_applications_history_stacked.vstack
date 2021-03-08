@@ -20,6 +20,7 @@
     "verification_status",
     "loan_status",
     "pymnt_plan",
+    "desc",
     "purpose",
     "title"
   ],
@@ -62,7 +63,7 @@
       "overwriteOutputSchema": false,
       "executionEngine": "SPARK_SUBMIT",
       "sparkConfig": {
-        "inheritConf": "sample-yarn-config",
+        "inheritConf": "default",
         "conf": []
       }
     }
@@ -155,7 +156,7 @@
           },
           {
             "name": "emp_length_month",
-            "type": "bigint"
+            "type": "double"
           },
           {
             "name": "home_ownership",
@@ -176,6 +177,11 @@
             "name": "pymnt_plan",
             "type": "string",
             "maxLength": 4194304
+          },
+          {
+            "name": "desc",
+            "type": "string",
+            "maxLength": 4000
           },
           {
             "name": "purpose",
