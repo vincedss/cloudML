@@ -28,11 +28,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615248442627
+    "lastModifiedOn": 1615248453632
   },
   "creationTag": {
     "versionNumber": 0,
@@ -56,8 +56,142 @@
     "readSQLDateColsAsDSSDates": true
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {
+        "name": "loan_amnt",
+        "type": "bigint"
+      },
+      {
+        "name": "funded_amnt",
+        "type": "bigint"
+      },
+      {
+        "name": "funded_amnt_inv",
+        "type": "double"
+      },
+      {
+        "name": "term",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "int_rate",
+        "type": "double"
+      },
+      {
+        "name": "installment",
+        "type": "double"
+      },
+      {
+        "name": "grade",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "sub_grade",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "issue_date",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "zip_code",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "addr_state",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "dti",
+        "type": "double"
+      },
+      {
+        "name": "emp_title",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "emp_length_month",
+        "type": "double"
+      },
+      {
+        "name": "home_ownership",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "verification_status",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "loan_status",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "pymnt_plan",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "purpose",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "maxLength": 4000
+      },
+      {
+        "name": "state_loan_amnt_avg",
+        "type": "double"
+      },
+      {
+        "name": "state_loan_amnt_sum",
+        "type": "bigint"
+      },
+      {
+        "name": "state_int_rate_min",
+        "type": "double"
+      },
+      {
+        "name": "state_int_rate_max",
+        "type": "double"
+      },
+      {
+        "name": "state_int_rate_avg",
+        "type": "double"
+      },
+      {
+        "name": "state_installment_avg",
+        "type": "double"
+      },
+      {
+        "name": "state_dti_min",
+        "type": "double"
+      },
+      {
+        "name": "state_dti_max",
+        "type": "double"
+      },
+      {
+        "name": "state_dti_avg",
+        "type": "double"
+      },
+      {
+        "name": "state_count",
+        "type": "bigint"
+      }
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
