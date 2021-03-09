@@ -10,7 +10,7 @@
     "runAs": "admin",
     "infra": {
       "containerSelection": {
-        "containerMode": "NONE"
+        "containerMode": "INHERIT"
       },
       "overrideGlobalK8sExposition": false,
       "exposition": {
@@ -33,11 +33,11 @@
   "config": {},
   "name": "API call loans V2",
   "versionTag": {
-    "versionNumber": 55,
+    "versionNumber": 56,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615264784075
+    "lastModifiedOn": 1615264795115
   },
   "creationTag": {
     "versionNumber": 0,
