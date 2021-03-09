@@ -35,6 +35,8 @@
         ],
         "runConditionExpression": "",
         "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
         "params": {
           "script": "import dataiku\nfrom datetime import datetime, date, timedelta\nfrom dataiku.scenario import Scenario\n\ns \u003d Scenario()\n\ntime \u003d datetime.now().replace(hour\u003d20,minute\u003d0,second\u003d0,microsecond\u003d0)\ntime \u003d time - timedelta(days\u003d1)\ntime \u003d time.strftime(\"%m/%d/%Y, %H:%M:%S\")\n\ns.set_scenario_variables(time\u003dtime)",
           "envSelection": {
@@ -54,6 +56,8 @@
         ],
         "runConditionExpression": "",
         "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
         "params": {
           "variables": {},
           "definitions": [
@@ -76,6 +80,8 @@
         ],
         "runConditionExpression": "",
         "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
         "params": {
           "variables": {},
           "definitions": [
@@ -85,6 +91,38 @@
             }
           ],
           "evaluateValues": true
+        }
+      },
+      {
+        "id": "build_0_true_d_loan_history_enriched_d_loan_applications_live_enriched_d_car_loans_simple",
+        "type": "build_flowitem",
+        "name": "build dataset loan_history_enriched dataset loan_applications_live_enriched dataset car_loans_simple",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "loan_history_enriched"
+            },
+            {
+              "type": "DATASET",
+              "itemId": "loan_applications_live_enriched"
+            },
+            {
+              "type": "DATASET",
+              "itemId": "car_loans_simple"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
         }
       }
     ]
