@@ -115,6 +115,26 @@
             "insightType": "chart",
             "displayMode": "INSIGHT",
             "resizeImageMode": "FIT_SIZE"
+          },
+          {
+            "tileType": "INSIGHT",
+            "box": {
+              "top": -1,
+              "left": -1,
+              "width": 8,
+              "height": 4
+            },
+            "clickAction": "DO_NOTHING",
+            "tileParams": {
+              "displayMode": "interactive_scoring",
+              "advancedOptions": {}
+            },
+            "autoLoad": true,
+            "showTitle": "YES",
+            "insightId": "2sOBdiM",
+            "insightType": "saved-model_report",
+            "displayMode": "INSIGHT",
+            "resizeImageMode": "FIT_SIZE"
           }
         ]
       },
@@ -176,11 +196,11 @@
   "name": "Portfolio Analysis",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 68,
+    "versionNumber": 69,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1614145930463
+    "lastModifiedOn": 1615278913193
   },
   "creationTag": {
     "versionNumber": 0,
