@@ -4,8 +4,8 @@
   "params": {
     "autoStartBackend": false,
     "envSelection": {
-      "envMode": "USE_BUILTIN_MODE",
-      "envName": "r_shiny"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "letsR"
     },
     "runAs": "vdestoecklin",
     "infra": {
@@ -33,11 +33,11 @@
   "config": {},
   "name": "API call loans V2",
   "versionTag": {
-    "versionNumber": 49,
+    "versionNumber": 50,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1614212404579
+    "lastModifiedOn": 1615263639405
   },
   "creationTag": {
     "versionNumber": 0,
