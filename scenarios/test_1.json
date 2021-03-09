@@ -5,11 +5,11 @@
   "name": "test",
   "active": false,
   "versionTag": {
-    "versionNumber": 15,
+    "versionNumber": 16,
     "lastModifiedBy": {
-      "login": "vdestoecklin"
+      "login": "admin"
     },
-    "lastModifiedOn": 1566301825879
+    "lastModifiedOn": 1615279749765
   },
   "checklists": {
     "checklists": []
@@ -20,7 +20,27 @@
     "suppressTriggersWhileRunning": true
   },
   "tags": [],
-  "triggers": [],
+  "triggers": [
+    {
+      "id": "tpGanftm",
+      "type": "temporal",
+      "name": "Time-based",
+      "delay": 5,
+      "active": true,
+      "params": {
+        "repeatFrequency": 4,
+        "frequency": "Hourly",
+        "startingFrom": "2021-03-09T08:49:00.000Z",
+        "daysOfWeek": [
+          "Tuesday"
+        ],
+        "monthlyRunOn": "ON_THE_DAY",
+        "minute": 49,
+        "hour": 19,
+        "timezone": "SERVER"
+      }
+    }
+  ],
   "reporters": [],
   "params": {
     "steps": [
