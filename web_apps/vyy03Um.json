@@ -7,7 +7,7 @@
       "envMode": "EXPLICIT_ENV",
       "envName": "letsR"
     },
-    "runAs": "vdestoecklin",
+    "runAs": "admin",
     "infra": {
       "containerSelection": {
         "containerMode": "INHERIT"
@@ -33,11 +33,11 @@
   "config": {},
   "name": "API call loans V2",
   "versionTag": {
-    "versionNumber": 50,
+    "versionNumber": 51,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615263639405
+    "lastModifiedOn": 1615264723364
   },
   "creationTag": {
     "versionNumber": 0,
