@@ -86,10 +86,32 @@
       "exportGitRepository": false,
       "exportInsightsData": false,
       "useManualPluginsInfo": false,
-      "includedDatasetsData": [],
+      "includedDatasetsData": [
+        {
+          "name": "loan_applications_raw_hdfs",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "loan_applications_history",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "loan_application_2012",
+          "type": "UploadedFiles"
+        }
+      ],
       "includedSavedModels": [
         {
-          "id": "4mHQeDVb"
+          "id": "vb5VWNj4",
+          "name": "SIMPLE LOAN DEFAULT"
+        },
+        {
+          "id": "TrkTIFbY",
+          "name": "SCORING_MODEL"
+        },
+        {
+          "id": "NTgCPj6x",
+          "name": "Prediction (SciKit Learn) on loan_status"
         }
       ],
       "includedModelEvaluationStores": [],
@@ -268,11 +290,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 201,
+    "versionNumber": 202,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615262530574
+    "lastModifiedOn": 1615264066489
   },
   "creationTag": {
     "versionNumber": 0,
