@@ -46,7 +46,8 @@ shinyUI(fluidPage(
             br()
        ),
         fluidRow(align = "center",
-            HTML('<div id="main_image"><img align="center" src="https://cdn.gearpatrol.com/wp-content/uploads/2018/12/GOTY-Dream-Cars-Gear-Patrol-lead-full.jpg" width="400" height="300" margin-bottom="20px" /></div>')     
+            #HTML('<div id="main_image"><img align="center" src="https://cdn.gearpatrol.com/wp-content/uploads/2018/12/GOTY-Dream-Cars-Gear-Patrol-lead-full.jpg" width="400" height="300" margin-bottom="20px" /></div>')
+            HTML('<div id="main_image"><img align="center" src="https://nextweblink.com/wp-content/uploads/2018/06/dream-car-800x416.jpg" width="576" height="300" margin-bottom="20px" /></div>')     
         ),
         fluidRow(align = "center",
                  uiOutput(outputId = "small")
