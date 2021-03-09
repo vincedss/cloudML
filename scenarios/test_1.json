@@ -5,11 +5,11 @@
   "name": "test",
   "active": false,
   "versionTag": {
-    "versionNumber": 16,
+    "versionNumber": 17,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615279749765
+    "lastModifiedOn": 1615279884238
   },
   "checklists": {
     "checklists": []
@@ -140,7 +140,7 @@
               "itemId": "car_loans_simple"
             }
           ],
-          "jobType": "RECURSIVE_BUILD",
+          "jobType": "RECURSIVE_FORCED_BUILD",
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
         }
