@@ -8,7 +8,8 @@
       "envName": "deep_learning_doctor"
     },
     "containerSelection": {
-      "containerMode": "INHERIT"
+      "containerMode": "EXPLICIT_CONTAINER",
+      "containerConf": "Ray_aks"
     },
     "skipPrerunValidate": false
   },
@@ -41,11 +42,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 22,
+    "versionNumber": 23,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1614311112036
+    "lastModifiedOn": 1615248667417
   },
   "creationTag": {
     "versionNumber": 0,
