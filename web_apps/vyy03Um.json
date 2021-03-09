@@ -5,7 +5,7 @@
     "autoStartBackend": false,
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
-      "envName": "letsR"
+      "envName": "secondR"
     },
     "runAs": "admin",
     "infra": {
@@ -33,11 +33,11 @@
   "config": {},
   "name": "API call loans V2",
   "versionTag": {
-    "versionNumber": 65,
+    "versionNumber": 66,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615267118297
+    "lastModifiedOn": 1615267776925
   },
   "creationTag": {
     "versionNumber": 0,
