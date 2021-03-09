@@ -59,11 +59,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615115990845
+    "lastModifiedOn": 1615248622827
   },
   "creationTag": {
     "versionNumber": 0,
@@ -129,11 +129,6 @@
         "maxLength": 4194304
       },
       {
-        "name": "issue_date_parsed",
-        "type": "date",
-        "maxLength": 4194304
-      },
-      {
         "name": "issue_d",
         "type": "string",
         "maxLength": 4194304
@@ -156,10 +151,6 @@
         "name": "emp_title",
         "type": "string",
         "maxLength": 4194304
-      },
-      {
-        "name": "emp_length_month",
-        "type": "bigint"
       },
       {
         "name": "home_ownership",
