@@ -119,15 +119,27 @@
           {
             "tileType": "INSIGHT",
             "box": {
-              "top": -1,
-              "left": -1,
-              "width": 8,
-              "height": 4
+              "top": 20,
+              "left": 0,
+              "width": 11,
+              "height": 6
             },
             "clickAction": "DO_NOTHING",
             "tileParams": {
               "displayMode": "interactive_scoring",
-              "advancedOptions": {}
+              "advancedOptions": {
+                "interactiveScoring": {
+                  "featuresOrder": [
+                    "installment",
+                    "loan_amnt",
+                    "term",
+                    "annual_inc",
+                    "home_ownership",
+                    "emp_length_month",
+                    "addr_state"
+                  ]
+                }
+              }
             },
             "autoLoad": true,
             "showTitle": "YES",
@@ -196,11 +208,11 @@
   "name": "Portfolio Analysis",
   "showGrid": true,
   "versionTag": {
-    "versionNumber": 70,
+    "versionNumber": 71,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615278914244
+    "lastModifiedOn": 1615278923311
   },
   "creationTag": {
     "versionNumber": 0,
