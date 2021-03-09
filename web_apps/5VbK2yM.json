@@ -4,8 +4,10 @@
   "params": {
     "autoStartBackend": false,
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "letsR"
     },
+    "runAs": "admin",
     "infra": {
       "containerSelection": {
         "containerMode": "INHERIT"
@@ -31,11 +33,11 @@
   "config": {},
   "name": "tesrt",
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615265540494
+    "lastModifiedOn": 1615265553541
   },
   "creationTag": {
     "versionNumber": 0,
