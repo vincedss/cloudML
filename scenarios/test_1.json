@@ -2,14 +2,14 @@
   "projectKey": "MLCREDITSCORING",
   "id": "test_1",
   "type": "step_based",
-  "name": "Pipeline Rebuid",
+  "name": "Pipeline Rebuild",
   "active": false,
   "versionTag": {
-    "versionNumber": 18,
+    "versionNumber": 19,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615447521013
+    "lastModifiedOn": 1615447524067
   },
   "checklists": {
     "checklists": []
