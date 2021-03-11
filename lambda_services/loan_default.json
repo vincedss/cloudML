@@ -1,4 +1,5 @@
 {
+  "name": "loan_default",
   "endpoints": [
     {
       "modelRef": "vb5VWNj4",
@@ -11,11 +12,187 @@
         "shapleyBackgroundSize": 100,
         "subChunkSize": 5000
       },
-      "testQueries": [],
+      "testQueries": [
+        {
+          "name": "car_loans_simple #1",
+          "q": {
+            "features": {
+              "loan_amnt": 9000,
+              "term": "36 months",
+              "int_rate": 6.25,
+              "installment": 301.04,
+              "addr_state": "AR",
+              "dti": 25.2,
+              "annual_inc": 100800,
+              "emp_length_month": 48,
+              "home_ownership": "MORTGAGE",
+              "loan_status": "ok"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #2",
+          "q": {
+            "features": {
+              "loan_amnt": 8000,
+              "term": "36 months",
+              "int_rate": 2.9,
+              "installment": 242.62,
+              "addr_state": "FL",
+              "dti": 19.65,
+              "annual_inc": 78600,
+              "emp_length_month": 36,
+              "home_ownership": "OWN",
+              "loan_status": "ok",
+              "desc": "Borrower added on 11/18/10 \u003e Hello everyone and thanks for taking interest in funding my loan.  This is actually my 2nd loan from lending club (that loan is paid in full. i love the no hassle, low interest rates, and automatic payments from my bank account without being revolving credit.   \u003cbr/\u003eI have no revolving credit and want to keep it that way.\u003cbr/\u003eNo mortgage and no rent.  i do have a truck payment, and about 7 grand left in student loans with a super low interest rate.\u003cbr/\u003e Borrower added on 11/24/10 \u003e By me having \u0026quot;A grade\u0026quot; credit your returns wont be as high with my lower interest rate compared to others with B and C grades but remember im a safer bet and have never missed a payment on ANY type of loan or bill!\u003cbr/\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #3",
+          "q": {
+            "features": {
+              "loan_amnt": 35000,
+              "term": "60 months",
+              "int_rate": 6.75,
+              "installment": 805.17,
+              "addr_state": "CA",
+              "dti": 6.22,
+              "annual_inc": 24880,
+              "emp_length_month": 96,
+              "home_ownership": "MORTGAGE",
+              "loan_status": "ok",
+              "desc": "Borrower added on 08/02/11 \u003e I have been at my job for 8 years now and periodically travel overseas.  I would like to install a pool, but do not have all the funds needed readily available to me.  I get paid every two weeks and have $1500 left each paycheck after all my bills are paid when I am home and even more when I am traveling so I will have no problem repaying the loan.\u003cbr/\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #4",
+          "q": {
+            "features": {
+              "loan_amnt": 18150,
+              "term": "36 months",
+              "int_rate": 7.8,
+              "installment": 634.62,
+              "addr_state": "CA",
+              "dti": 27.53,
+              "annual_inc": 110120,
+              "home_ownership": "RENT",
+              "loan_status": "incident"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #5",
+          "q": {
+            "features": {
+              "loan_amnt": 35000,
+              "term": "60 months",
+              "int_rate": 5.86,
+              "installment": 470.14,
+              "addr_state": "NY",
+              "dti": 19.42,
+              "annual_inc": 77680,
+              "emp_length_month": 96,
+              "home_ownership": "RENT",
+              "loan_status": "ok",
+              "desc": "Borrower added on 12/07/11 \u003e Loan to consolidate and eliminate high APR and high risk debts.\u003cbr\u003e Borrower added on 12/08/11 \u003e I need at least 25k to who helped me with a loan and now needs the money back for her dying mother.  Please help.\u003cbr\u003e\u003cbr\u003e Borrower added on 12/08/11 \u003e I\u0027ve worked for my company which is a government funded institution for 8 years.  I have a solid credit history with no late payments or defaults.  If I can get full funding here, it fits perfectly into my budget and it will allow me to fore go having to take supplementary loans from the banks.\u003cbr\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #6",
+          "q": {
+            "features": {
+              "loan_amnt": 10000,
+              "term": "36 months",
+              "int_rate": 5.5,
+              "installment": 327.36,
+              "addr_state": "VA",
+              "dti": 3.4,
+              "annual_inc": 13600,
+              "emp_length_month": 12,
+              "home_ownership": "RENT",
+              "loan_status": "ok",
+              "desc": "Borrower added on 04/05/10 \u003e This loan is to obtain 10% for a downpayment on a co-op.  I already have 10%, however my lender requires 20%.  PMI is not offered.\u003cbr/\u003e\u003cbr/\u003eThe total cost of the co-op is $243,000 and I already have a ratified contract.\u003cbr/\u003e\u003cbr/\u003eAs a government employee in the Defense Department (GS 12, step 2), my job is extremely stable.  Because of my security clearance, I actually risk my career if I am not financially responsible.  \u003cbr/\u003e\u003cbr/\u003eIn addition to my normal government salary, I receive approximately $1,000 per month, tax free, in disability payments from the VA due to injuries suffered in the line of duty.  Unfortunately, the particular co-op I am interested in purchasing does not honor VA loans.\u003cbr/\u003e Borrower added on 04/05/10 \u003e The purpose of this loan is to acquire 10% for a down payment on a home.  I already have 10%, however my lender requires a downpayment of 20% because it is a co-op.\u003cbr/\u003e Borrower added on 04/05/10 \u003e Sorry for the double post, I didn\u0027t initially see what I originally posted.\u003cbr/\u003e Borrower added on 04/05/10 \u003e Also, should I purchase this home, I will be qualified for the 1st Time Home Buyer\u0027s Tax Credit, which I plan to partially use to help pay off this loan.\u003cbr/\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #7",
+          "q": {
+            "features": {
+              "loan_amnt": 6400,
+              "term": "36 months",
+              "int_rate": 4.2,
+              "installment": 201.71,
+              "addr_state": "OR",
+              "dti": 5.23,
+              "annual_inc": 20920,
+              "emp_length_month": 120,
+              "home_ownership": "RENT",
+              "loan_status": "ok"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #8",
+          "q": {
+            "features": {
+              "loan_amnt": 22000,
+              "term": "36 months",
+              "int_rate": 5.38,
+              "installment": 717.65,
+              "addr_state": "OH",
+              "dti": 2.74,
+              "annual_inc": 10960,
+              "emp_length_month": 36,
+              "home_ownership": "MORTGAGE",
+              "loan_status": "ok",
+              "desc": "Borrower added on 06/26/10 \u003e This is bridge financing for me to purchase a specific foreclosure property. I plan to renovate it within 3 months, refinance with cash out in the next 2 months, rent it out and pay off this loan in the 6th month.\u003cbr/\u003e\u003cbr/\u003eI run a small purchase/renovate and rent business with a portfolio of 9 properties conservatively valued at $1m. All my units are rented and have a combined equity of $550,000. I have the option of refinancing one of these properties but a standard refinance will not close by July 9 when I need to purchase the foreclosure property.\u003cbr/\u003e\u003cbr/\u003eI have been in the rental business for 10 years and purchase on average 1 unit a year. These are generally condos/single family units which I rent out in a college town where I live.\u003cbr/\u003e\u003cbr/\u003eAdd this to a decent income as an IT consultant, and I am a very low risk.\u003cbr/\u003e Borrower added on 06/26/10 \u003e This is bridge financing for me to purchase a specific foreclosure property. I plan to renovate it within 3 months, refinance with cash out in the next 2 months, rent it out and pay off this loan in the 6th month.\u003cbr/\u003e\u003cbr/\u003eI run a small purchase/renovate and rent business with a portfolio of 9 properties conservatively valued at $1m. All my units are rented and have a combined equity of $550,000. I have the option of refinancing one of these properties but a standard refinance will not close by July 9 when I need to purchase the foreclosure property.\u003cbr/\u003e\u003cbr/\u003eI have been in the rental business for 10 years and purchase on average 1 unit a year. These are generally condos/single family units which I rent out in a college town where I live.\u003cbr/\u003e\u003cbr/\u003eAdd this to a decent income as an IT consultant, and I am a very low risk.\u003cbr/\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #9",
+          "q": {
+            "features": {
+              "loan_amnt": 25000,
+              "term": "36 months",
+              "int_rate": 5.31,
+              "installment": 814,
+              "addr_state": "IL",
+              "dti": 12.32,
+              "annual_inc": 49280,
+              "emp_length_month": 12,
+              "home_ownership": "RENT",
+              "loan_status": "ok",
+              "desc": "Borrower added on 02/03/10 \u003e Looking to pay off some high interest debt.\u003cbr/\u003e Borrower added on 02/03/10 \u003e I plan on doing everything possible to save enough money to pay this off faster than the 3 years. Thank you for helping.\u003cbr/\u003e Borrower added on 02/05/10 \u003e I have not used a credit card in the last 12 months without paying off whatever was charged the same month. I have been paying as much as two times the minimum payment. They keep raising the interest rates. I just want out.\u003cbr/\u003e Borrower added on 02/15/10 \u003e Thank you everyone who has invested in me. I plan on doing the same as soon as I am back on track.\u003cbr/\u003e"
+            }
+          }
+        },
+        {
+          "name": "car_loans_simple #10",
+          "q": {
+            "features": {
+              "loan_amnt": 6000,
+              "term": "36 months",
+              "int_rate": 7.08,
+              "installment": 205.54,
+              "addr_state": "NH",
+              "dti": 18.65,
+              "annual_inc": 74600,
+              "emp_length_month": 120,
+              "home_ownership": "MORTGAGE",
+              "loan_status": "ok"
+            }
+          }
+        }
+      ],
       "enrichMapping": [],
       "healthCheckQueries": [],
-      "returnPostEnrichData": false,
-      "auditPostEnrichData": false,
+      "returnPostEnrichData": true,
+      "auditPostEnrichData": true,
       "id": "predict_default",
       "type": "STD_PREDICTION"
     }
