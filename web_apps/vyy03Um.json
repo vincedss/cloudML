@@ -33,11 +33,11 @@
   "config": {},
   "name": "API call loans V2",
   "versionTag": {
-    "versionNumber": 69,
+    "versionNumber": 70,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1615278653059
+    "lastModifiedOn": 1615432310054
   },
   "creationTag": {
     "versionNumber": 0,
