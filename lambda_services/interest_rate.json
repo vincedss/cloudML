@@ -191,8 +191,8 @@
       ],
       "enrichMapping": [],
       "healthCheckQueries": [],
-      "returnPostEnrichData": false,
-      "auditPostEnrichData": false,
+      "returnPostEnrichData": true,
+      "auditPostEnrichData": true,
       "id": "predict_interest_rate",
       "type": "STD_PREDICTION"
     }
