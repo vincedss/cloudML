@@ -1,7 +1,16 @@
 {
-  "type": "grouping",
+  "type": "sql_query",
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
+  "params": {
+    "allowMultipleConnections": false,
+    "displayExecutionPlan": true,
+    "sqlPipelineParams": {
+      "pipelineAllowStart": true,
+      "pipelineAllowMerge": true
+    },
+    "skipPrerunValidate": false
+  },
   "customMeta": {
     "kv": {}
   },
@@ -31,11 +40,11 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 8,
+    "versionNumber": 9,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616041173236
+    "lastModifiedOn": 1616041173514
   },
   "creationTag": {
     "versionNumber": 0,
