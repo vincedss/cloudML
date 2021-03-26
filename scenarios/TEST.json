@@ -5,11 +5,11 @@
   "name": "Test",
   "active": false,
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616719193768
+    "lastModifiedOn": 1616719205367
   },
   "checklists": {
     "checklists": []
@@ -39,6 +39,7 @@
         }
       },
       "id": "zTIjO8rU",
+      "name": "Reporter",
       "runConditionEnabled": false,
       "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
       "phase": "END"
