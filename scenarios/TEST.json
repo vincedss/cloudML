@@ -47,6 +47,30 @@
           "refreshHiveMetastore": true,
           "proceedOnFailure": false
         }
+      },
+      {
+        "id": "build_0_true_d_loan_applications_live_enriched",
+        "type": "build_flowitem",
+        "name": "build dataset loan_applications_live_enriched",
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "resetScenarioStatus": false,
+        "delayBetweenRetries": 10,
+        "maxRetriesOnFail": 0,
+        "params": {
+          "builds": [
+            {
+              "type": "DATASET",
+              "itemId": "loan_applications_live_enriched"
+            }
+          ],
+          "jobType": "RECURSIVE_BUILD",
+          "refreshHiveMetastore": true,
+          "proceedOnFailure": false
+        }
       }
     ]
   },
