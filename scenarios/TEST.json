@@ -5,11 +5,11 @@
   "name": "Test",
   "active": false,
   "versionTag": {
-    "versionNumber": 12,
+    "versionNumber": 13,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616719102126
+    "lastModifiedOn": 1616719193768
   },
   "checklists": {
     "checklists": []
@@ -29,7 +29,7 @@
         "configuration": {
           "channelId": "email",
           "subject": "DSS scenario ${scenarioName}: ${outcome}",
-          "recipient": "vincent.destoecklin@dataiku.com",
+          "recipient": "vincent.de.stoecklin@gmail.com",
           "sendAsHTML": false,
           "attachments": [],
           "messageSource": "INLINE",
