@@ -5,11 +5,11 @@
   "name": "Test",
   "active": false,
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616718591329
+    "lastModifiedOn": 1616718649032
   },
   "checklists": {
     "checklists": []
@@ -62,7 +62,8 @@
           "builds": [
             {
               "type": "DATASET",
-              "itemId": "loan_history_features"
+              "itemId": "loan_applications_live_enriched",
+              "partitionsSpec": ""
             }
           ],
           "jobType": "NON_RECURSIVE_FORCED_BUILD",
