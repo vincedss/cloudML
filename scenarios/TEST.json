@@ -5,11 +5,11 @@
   "name": "Test",
   "active": false,
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1616718502276
+    "lastModifiedOn": 1616718563988
   },
   "checklists": {
     "checklists": []
@@ -21,7 +21,28 @@
   },
   "tags": [],
   "triggers": [],
-  "reporters": [],
+  "reporters": [
+    {
+      "active": true,
+      "messaging": {
+        "type": "mail-scenario",
+        "configuration": {
+          "channelId": "email",
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "recipient": "\u003cvincent.destoecklin@dataiku.com\u003e",
+          "sendAsHTML": false,
+          "attachments": [],
+          "messageSource": "INLINE",
+          "templateFormat": "FORMULA",
+          "templateName": "default.ftl"
+        }
+      },
+      "id": "zTIjO8rU",
+      "runConditionEnabled": true,
+      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
+      "phase": "END"
+    }
+  ],
   "params": {
     "steps": [
       {
